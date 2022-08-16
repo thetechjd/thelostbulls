@@ -37,8 +37,10 @@ module.exports = {
         fuschia: '#9f2daa',
         teal: '#04c5c8',
         yelloww: 'var(--clr-yellow)',
+        brightyellow: '#fcf003',
         bluee: 'var(--clr-blue)',
         greenn: 'var(--clr-green)',
+        lime: '#00ff77',
         background: 'var(--clr-background)'
       },
     },

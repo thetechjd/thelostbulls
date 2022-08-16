@@ -10,13 +10,25 @@
 }
 
 @font-face {
+  font-family: "Lobster";
+  src: url("../public/fonts/Lobster.woff2");
+ 
+}
+
+@font-face {
   font-family: "Rosewood";
   src: url("../public/fonts/Rosewood_Regular.ttf");
  
 }
 
+@font-face {
+  font-family: "PressStart";
+  src: url("../public/fonts/PressStart2p_Regular.ttf");
+ 
+}
+
 :root{
-  --font-family: 'Termina';
+  --font-family: 'PressStart';
   --clr-light: #f7ede2;
   --clr-lightt: #f0e9e9;
   --clr-purple: #9b5de5;
@@ -44,8 +56,16 @@ a {
   text-decoration: none;
 }
 
-h2 {
-  font-family: "Rosewood";
+h1, h2 {
+  font-family: "Lobster";
+}
+
+.about {
+  font-family: "PressStart";
+}
+
+.connect {
+  font-family: "PressStart";
 }
 
 * {
@@ -57,8 +77,9 @@ html {
 }
 
 .bg-pattern {
-  background-color: #0b082c;
+  background-image: url('/images/1876.jpg');
   background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 

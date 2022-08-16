@@ -154,30 +154,37 @@ export default function Home() {
 
           {/* Logo Section */}
 
+          <div className='flex-grow'>
+            <div className='flex'>
+              <Link className='w-min-content' href='/' passHref>
+                <a className='flex'>
+                  <img alt='' src='/images/TLBLogo.webp' className='h-[80px]' />
+
+                </a>
+              </Link>
+            </div>
+          </div>
+
+
 
           {/* Desktop Navbar Section + Connect Wallet + icons */}
           <div className='items-center md:flex text-2xs'>
             <ul className='flex space-x-2'>
+
               <li>
-                <a className='flex'>
-                  <p className='md:h7 md:px-2 md:pt-1 pb-1 rounded uppercase text-sm font-black
-          text-white md:flex'>Meet Some of The Lost Bulls </p>
-                </a>
-              </li>
-              <li>
-                <a className='flex'>
+                <a className='bg-opacity-0 border-r text-gray-100 opacity-80 items-center relative h-7 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-200 duration-200 px-4 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
                   <p className='md:h7 md:px-2 md:pt-1 pb-1 rounded uppercase text-sm font-black
           text-white md:flex'>The Backstory</p>
                 </a>
               </li>
               <li>
-                <a className='flex'>
+                <a className='bg-opacity-0 text-gray-100 border-r opacity-80 items-center relative h-7 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-200 duration-200 px-4 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
                   <p className='md:h7 md:px-2 md:pt-1 pb-1 rounded uppercase text-sm font-black
           text-white md:flex'>Space Map </p>
                 </a>
               </li>
               <li>
-                <a className='flex'>
+                <a className='bg-opacity-0 text-gray-100 opacity-80 items-center relative h-7 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-4 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
                   <p className='md:h7 md:px-2 md:pt-1 pb-1 rounded uppercase text-sm font-black
           text-white md:flex'>FAQ's</p>
                 </a>
@@ -187,7 +194,7 @@ export default function Home() {
               <li>
                 {walletAddress.length > 0 ? (
 
-                  <div className='px-4 bg-opacity-20 text-black items-center relative h-9 tracking-wider sm:pt-0.5 md:pt-2 lg:pt-0.5 first::pt-0 duration-500 text-6xs md:text-base padding-huge opacity-100 hover:bg-opacity-70 rounded flex justify-center flex-row border border-pinkk hover:shadow-green-500/20 cursor-pointer'
+                  <div className='px-4 bg-opacity-20 text-black items-center relative h-9 tracking-wider sm:pt-0.5 md:pt-2 lg:pt-0.5 first::pt-0 duration-500 text-6xs md:text-base padding-huge opacity-100 hover:bg-opacity-70 rounded flex justify-center flex-row border border-gray-900 hover:shadow-green-500/20 cursor-pointer'
                   >
                     Connected:{String(walletAddress).substring(0, 6)}
                     {"....."}
@@ -195,7 +202,7 @@ export default function Home() {
                   </div>
                 ) : (
 
-                  <button className='px-4 bg-teal bg-opacity-100 text-gray-900 font-semibold items-center relative h-9 tracking-wider pt-0.5 first::pt-0 duration-200 hover:bg-opacity-70 font-400 px-4 rounded text-2xs' id="walletButton"
+                  <button className='px-4 bg-lime bg-opacity-100 text-gray-900 font-semibold items-center  relative h-9 tracking-wider pt-0.5 first::pt-0 duration-200 hover:bg-opacity-70 font-400 px-4 rounded text-2xs' id="walletButton"
 
                     onClick={connectWalletPressed}
                   >Connect Wallet
@@ -226,23 +233,40 @@ export default function Home() {
           {/* Left Hero Section - Mint Info */}
           <div className="w-full flex flex-col items-center ">
 
-            <img src='https://static.wixstatic.com/media/849138_468f0155ed364140b1ec62eebde296dc~mv2.jpg/v1/fill/w_104,h_100,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/TLB%20Logo_edited_edited.jpg' className='w-[100px] mt-10 justify-center items-center' />
+
             <div className="max-w-[1400px] mb-12 mt-8 md:mb-0">
 
+              <div className="w-full mt-12 px-4">
+
+                <h1 className="text-6xl text-center md:text-8xl font-extrabold text-gray-100 uppercase mb-3 md:mb-8 ">
+                  The Lost Bulls
+                </h1>
+
+              </div>
 
 
 
 
-              <img src='https://static.wixstatic.com/media/849138_03a62430433748f5bd3c66b9f2259e6e~mv2.png/v1/fill/w_980,h_280,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/thelostbulls%20banner_PNG.png' className='w-[1500px] mt-3 justify-center items-center' />
+
+
 
 
             </div>
-            <h3 className='text-yellow-500'>For every NFT minted, TLB creators will automatically burn 1,000,000 Shiba Inu tokens</h3>
+            <h3 className='text-brightyellow font-semibold'>For every NFT minted, TLB creators will automatically burn 1,000,000 Shiba Inu tokens</h3>
+
+            <button
+              className='text-lg mt-5 font-semibold uppercase font-base text-white px-12 py-2 border-2 border-lime rounded-md tracking-wide w-1/4 bg-teal hover:shadow-green-500/20'
+            // onClick={mintPass}
+
+            >
+              Join PreSale Whitelist
+            </button>
 
             <About />
-            <h2 className="text-white text-6xl text-center">Meet Some of The Lost Bulls</h2>
-            <img src='/images/lostbulls.gif' alt='pass image' className='w-max-[500px] mb-5 flex items-center justify-center' />
 
+            <div className="relative rounded-md pb-2 mt-12 p-2">
+              <img src='/images/lostbulls.gif' alt='pass image' className='w-max-[400px] rounded-lg mb-5 flex items-center justify-center' />
+            </div>
 
 
             {/* Total supply - Price info */}
@@ -317,7 +341,8 @@ export default function Home() {
 
         {/* Right Hero Section - Video/Image Bird PASS */}
 
-
+        <img className="fixed bottom-0 left-0 w-1/5 z-20" src="/images/mainbull.png" />
+        <img className="fixed top-5 right-5 w-1/8 z-20" src="/images/spaceship.png" />
       </section>
 
       {/*
@@ -325,9 +350,10 @@ export default function Home() {
       <SpaceMap />
       <FAQ />
       <Benefits />
-      <Team />
+  <Team />
       <Footer />
   */}
+
 
       {/* Content + footer Section */}
 
