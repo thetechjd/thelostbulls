@@ -41,6 +41,7 @@ module.exports = {
         bluee: 'var(--clr-blue)',
         greenn: 'var(--clr-green)',
         lime: '#00ff77',
+        titanium: '#878681',
         background: 'var(--clr-background)'
       },
     },

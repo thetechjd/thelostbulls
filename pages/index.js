@@ -202,7 +202,7 @@ export default function Home() {
                   </div>
                 ) : (
 
-                  <button className='px-4 bg-lime bg-opacity-100 text-gray-900 font-semibold items-center  relative h-9 tracking-wider pt-0.5 first::pt-0 duration-200 hover:bg-opacity-70 font-400 px-4 rounded text-2xs' id="walletButton"
+                  <button className='px-4 titanium bg-opacity-100 text-gray-900 font-semibold items-center  relative h-9 tracking-wider pt-0.5 first::pt-0 duration-200 hover:bg-opacity-70 font-400 px-4 rounded text-2xs' id="walletButton"
 
                     onClick={connectWalletPressed}
                   >Connect Wallet
@@ -252,10 +252,10 @@ export default function Home() {
 
 
             </div>
-            <h3 className='text-brightyellow font-semibold'>For every NFT minted, TLB creators will automatically burn 1,000,000 Shiba Inu tokens</h3>
+            <h3 className='text-center text-brightyellow font-semibold'>For every NFT minted, TLB creators will automatically burn 1,000,000 Shiba Inu tokens</h3>
 
             <button
-              className='text-lg mt-5 font-semibold uppercase font-base text-white px-12 py-2 border-2 border-lime rounded-md tracking-wide w-1/4 bg-teal hover:shadow-green-500/20'
+              className='connect titanium text-xs md:text-md mt-5 font-semibold uppercase font-base text-black px-1 md:px-3 py-2 border-2 border-teal rounded-md tracking-wide w-1/2 md:w-1/3 lg:w-1/4 hover:shadow-green-500/20'
             // onClick={mintPass}
 
             >
@@ -310,7 +310,7 @@ export default function Home() {
                 </div>
                 <div className='flex items-center justify-center'>
                   <button
-                    className='text-lg font-semibold uppercase font-base text-white px-12 py-2 tracking-wide bg-fuschia hover:shadow-green-500/20'
+                    className='text-lg titanium font-semibold uppercase font-base text-white px-12 py-2 tracking-wide hover:shadow-green-500/20'
                     // onClick={mintPass}
                     onClick={onMintPressed}
                   >
@@ -321,7 +321,7 @@ export default function Home() {
 
             ) : (
               <>
-                <p className='text-center flex flex-col font-bold text-black text-base md:text-2xl text-body-color leading-relaxed m-3 md:m-8 break-words ...'>
+                <p className='text-center flex flex-col font-bold text-white text-base md:text-2xl text-body-color leading-relaxed m-3 md:m-8 break-words ...'>
                   Connect Your Wallet to Mint
                 </p></>
             )}

@@ -77,10 +77,15 @@ html {
 }
 
 .bg-pattern {
-  background-image: url('/images/1876.jpg');
+  background-color: #0B082C;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.titanium {
+  background: rgb(219,219,217);
+background: linear-gradient(90deg, rgba(219,219,217,1) 0%, rgba(135,134,129,1) 35%, rgba(0,0,0,1) 100%);
 }
 
 .skewed{
