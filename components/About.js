@@ -14,7 +14,6 @@ export default function About() {
                 <p className="mb-3">The Lost Bulls (TLB) is an NFT collection of 5,000 unique part-skeleton bulls living on the Ethereum blockchain as ERC-721 tokens. Each part-skeleton bull possesses a distinct combination of attributes from a total of 68 traits.</p>
                 <p className="mb-3">TLB was designed with a symbolic meaning behind it.  It symbolizes the two different crypto markets, Bull and Bear.  The bull part of the body indicates the Bull market, and the skeleton part signifies being "Lost" or waiting for something optimistic to happen, hence the Bear market.</p>
                 <p className="mb-3">When you buy one of the TLB NFTs, you are not only buying a unique digital art piece with symbolism connected to it. You are also taking part in all of its beneficial features.</p>
-                <p>Scroll down to learn more about our digital collectibles, how to mint an NFT, and join <a href='https://discord.gg/yhYt9BZT' className='text-yellow-300'>The Lost Bulls Discord.</a></p>
             </div>
         </div>
     )
