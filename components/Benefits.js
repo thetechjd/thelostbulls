@@ -1,0 +1,23 @@
+import React from 'react'
+
+export default function Benefits() {
+    return (
+        <div className='bg-pattern pt-5 pb-12 px-8 flex flex-col justify-between'>
+            <h2 className='text-center text-6xl'>TLB Benefits</h2>
+            <ul className='pt-8 text-center list-disc'>
+                <li className=''>TLB creators will automatically burn 1,000,000 Shiba Inu tokens for every TLB NFT minted.</li>
+                <li className='list-disc' >The TLB team knows that community is what drives the long-term value of any project.  That is why we are rewarding our holders by offering staking terms:
+                    <li className='list-none'>1 month: 1% ETH</li>
+                    <li className='list-none'>2 month term: 3% ETH</li>
+                    <li className='list-none'>3 month term: 5% ETH</li>
+                </li>
+                <li>The creators of TLB are not even close to being finished! We are currently planning our next project, which TLB holders will have first priority to once dropped.</li>
+
+
+
+
+            </ul>
+
+        </div>
+    )
+}
