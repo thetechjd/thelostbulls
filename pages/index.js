@@ -41,6 +41,7 @@ export default function Home() {
   const [totalMinted, setTotalMinted] = useState(0);
   const [price, setPrice] = useState(0);
   const [isWhitelisted, setWhitelisted] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(async () => {
     const { address, status } = await getCurrentWalletConnected();
@@ -167,48 +168,121 @@ export default function Home() {
 
 
 
-          {/* Desktop Navbar Section + Connect Wallet + icons */}
-          <div className='items-center md:flex text-2xs'>
-            <ul className='flex space-x-2'>
+          <nav>
 
+            <section className="MOBILE-MENU flex lg:hidden">
+              <div
+                className="HAMBURGER-ICON space-y-2"
+                onClick={() => setIsNavOpen((prev) => !prev)}
+              >
+                <span className="block h-0.5 w-8 animate-pulse bg-brightyellow"></span>
+                <span className="block h-0.5 w-8 animate-pulse bg-brightyellow"></span>
+                <span className="block h-0.5 w-8 animate-pulse bg-brightyellow"></span>
+              </div>
+
+              <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
+                <div
+                  className="absolute top-0 right-0 px-8 py-8"
+                  onClick={() => setIsNavOpen(false)}
+                >
+                  <svg
+                    className="h-8 w-8 text-gray-600"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                </div>
+                <ul className="flex flex-col items-center justify-between min-h-[250px]">
+                  <li className="border-b text-black border-gray-400 my-2 uppercase">
+                    <a href="/about">The Backstory</a>
+                  </li>
+                  <li className="border-b text-black border-gray-400 my-2 uppercase">
+                    <a href="/portfolio">SpaceMap</a>
+                  </li>
+                  <li className="border-b text-black border-gray-400 my-2 uppercase">
+                    <a href="/contact">Benefits</a>
+                  </li>
+                  <li className="border-b text-black border-gray-400 my-2 uppercase">
+                    <a href="/contact">FAQ's</a>
+                  </li>
+                  <li className="border-b text-black border-gray-400 my-2 uppercase">
+                    <a href="/contact">Team</a>
+                  </li>
+                  <li className="border-b text-black border-gray-400 my-2 uppercase">
+                    <a href="/contact">Opensea</a>
+                  </li>
+                  <li className="border-b text-black border-gray-400 my-2 uppercase">
+                    <a href="/contact">Stake</a>
+                  </li>
+                  <li>
+                    {walletAddress.length > 0 ? (
+
+                      <div className='px-4 bg-opacity-20 text-white items-center relative h-9 tracking-wider sm:pt-0.5 md:pt-2 lg:pt-0.5 first::pt-0 duration-500 text-6xs md:text-base padding-huge opacity-100 hover:bg-opacity-70 rounded flex justify-center flex-row border border-gray-900 hover:shadow-green-500/20 cursor-pointer'
+                      >
+                        Connected:{String(walletAddress).substring(0, 6)}
+                        {"....."}
+                        {String(walletAddress).substring(39)}
+                      </div>
+                    ) : (
+
+                      <button className='px-4 bg-titanium bg-opacity-100 text-gray-100 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 duration-500 text-2xs md:text-base padding-huge opacity-100 hover:bg-opacity-100 rounded flex justify-center flex-row bg-gradient-to-tl hover:from-greenn from-peach to-peach hover:to-bluee border-none hover:shadow-green-500/20 cursor-pointer' id="walletButton"
+
+                        onClick={connectWalletPressed}
+                      >Connect
+                      </button>
+                    )}
+                  </li>
+
+
+                </ul>
+              </div>
+            </section>
+
+            <ul className="DESKTOP-MENU hidden space-x-2 lg:flex">
               <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-7 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-200 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
-                  <p className='md:h7 md:px-1 md:pt-1 pb-1 rounded uppercase text-xs font-black
+                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 bg-blue-200 duration-200 px-1 border-r hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                  <p className='rounded uppercase text-xs font-black
           text-white md:flex'>The Backstory</p>
                 </a>
               </li>
               <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-7 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-200 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
-                  <p className='md:h7 md:px-1 md:pt-1 pb-1 rounded uppercase text-xs font-black
+                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 bg-blue-200 duration-200 px-1 border-r hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                  <p className='rounded uppercase text-xs font-black
           text-white md:flex'>Space Map </p>
                 </a>
               </li>
               <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-7 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
-                  <p className='md:h7 md:px-1 md:pt-1 pb-1 rounded uppercase text-xs font-black
+                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 border-r items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                  <p className='rounded uppercase text-xs font-black
           text-white md:flex'>Benefits</p>
                 </a>
               </li>
               <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-7 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
-                  <p className='md:h7 md:px-2 md:pt-1 pb-1 rounded uppercase text-sm font-black
+                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 border-r items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                  <p className='rounded uppercase text-sm font-black
           text-white md:flex'>FAQ's</p>
                 </a>
               </li>
               <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-7 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
-                  <p className='md:h7 md:px-2 md:pt-1 pb-1 rounded uppercase text-sm font-black
+                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center border-r relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                  <p className='rounded uppercase text-sm font-black
           text-white md:flex'>Team</p>
                 </a>
               </li>
               <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-7 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
-                  <p className='md:h7 md:px-2 md:pt-1 pb-1 rounded uppercase text-sm font-black
+                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center border-r relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                  <p className='rounded uppercase text-sm font-black
           text-white md:flex'>Stake</p>
                 </a>
               </li>
               <li className='hidden sm:flex'>
-                <a className='bg-opacity-0 text-gray-100 opacity-80 items-center relative h-7 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 rounded flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110' href='http://opensea.io'>
+                <a className='bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 rounded flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110' href='http://opensea.io'>
                   <svg width="40" height="40" viewBox="0 0 90 90" fill="white" xmlns="http://www.w3.org/2000/svg">
                     <path d="M90 45C90 69.8514 69.8514 90 45 90C20.1486 90 0 69.8514 0 45C0 20.1486 20.1486 0 45 0C69.8566 0 90 20.1486 90 45Z" fill="none" />
                     <path d="M22.2011 46.512L22.3952 46.2069L34.1015 27.8939C34.2726 27.6257 34.6748 27.6535 34.8043 27.9447C36.7599 32.3277 38.4475 37.7786 37.6569 41.1721C37.3194 42.5683 36.3947 44.4593 35.3544 46.2069C35.2204 46.4612 35.0724 46.7109 34.9152 46.9513C34.8413 47.0622 34.7164 47.127 34.5823 47.127H22.5432C22.2195 47.127 22.03 46.7756 22.2011 46.512Z" fill="white" />
@@ -218,9 +292,6 @@ export default function Home() {
                   </svg>
                 </a>
               </li>
-
-
-
               {/* CONNECT WALLET */}
               <li>
                 {walletAddress.length > 0 ? (
@@ -241,13 +312,34 @@ export default function Home() {
                 )}
               </li>
 
-              {/* Twitter Icon */}
-
             </ul>
-          </div>
-
+          </nav>
+          <style>{`
+      .hideMenuNav {
+        display: none;
+      }
+      .showMenuNav {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: white;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+    `}</style>
         </div>
+
       </header>
+
+
+
+
 
       {/* Hero/Mint Section */}
       <section className="flex items-center justify-center bg-pattern py-12 px-5 overflow-hidden relative z-10" id="">
