@@ -2,6 +2,7 @@ import { createAlchemyWeb3 } from "@alch/alchemy-web3";
 import { useEffect, useState } from "react";
 import Link from 'next/link';
 import Head from 'next/head';
+import Footer from '../components/Footer';
 
 import { useStatus } from "../context/statusContext";
 import { connectWallet, getCurrentWalletConnected, getNFTPrice, getTotalMinted } from "../utils/interact.js";
@@ -188,7 +189,7 @@ export default function Home() {
             <div className='flex'>
               <Link className='w-min-content' href='/' passHref>
                 <a className='flex'>
-                  <img alt='' src='/images/TLBLogo.webp' className='h-[80px]' />
+                  <img alt='' src='/images/bull_logo.png' className='h-[80px]' />
 
                 </a>
               </Link>
@@ -227,49 +228,51 @@ export default function Home() {
                     <line x1="6" y1="6" x2="18" y2="18" />
                   </svg>
                 </div>
-                <ul className="flex flex-col items-center justify-between min-h-[250px]">
-                  <li className="border-b text-black border-gray-400 my-2 uppercase">
-                    <a href="/about">The Backstory</a>
-                  </li>
-                  <li className="border-b text-black border-gray-400 my-2 uppercase">
-                    <a href="/portfolio">SpaceMap</a>
-                  </li>
-                  <li className="border-b text-black border-gray-400 my-2 uppercase">
-                    <a href="/contact">Benefits</a>
-                  </li>
-                  <li className="border-b text-black border-gray-400 my-2 uppercase">
-                    <a href="/contact">FAQ's</a>
-                  </li>
-                  <li className="border-b text-black border-gray-400 my-2 uppercase">
-                    <a href="/contact">Team</a>
-                  </li>
-                  <li className="border-b text-black border-gray-400 my-2 uppercase">
-                    <a href="/contact">Opensea</a>
-                  </li>
-                  <li className="border-b text-black border-gray-400 my-2 uppercase">
-                    <a href="/contact">Stake</a>
-                  </li>
-                  <li>
-                    {walletAddress.length > 0 ? (
+                <div className='bg-pattern p-20'>
+                  <ul className="flex flex-col items-center justify-between min-h-[250px]">
+                    <li className="border-b text-white border-gray-400 my-2 uppercase">
+                      <a href="/about">The Backstory</a>
+                    </li>
+                    <li className="border-b text-white border-gray-400 my-2 uppercase">
+                      <a href="/portfolio">SpaceMap</a>
+                    </li>
+                    <li className="border-b text-white border-gray-400 my-2 uppercase">
+                      <a href="/contact">Benefits</a>
+                    </li>
+                    <li className="border-b text-white border-gray-400 my-2 uppercase">
+                      <a href="/contact">FAQ's</a>
+                    </li>
+                    <li className="border-b text-white border-gray-400 my-2 uppercase">
+                      <a href="/contact">Team</a>
+                    </li>
+                    <li className="border-b text-white border-gray-400 my-2 uppercase">
+                      <a href="/contact">Opensea</a>
+                    </li>
+                    <li className="border-b text-white border-gray-400 my-2 uppercase">
+                      <a href="/contact">Stake</a>
+                    </li>
+                    <li>
+                      {walletAddress.length > 0 ? (
 
-                      <div className='px-4 bg-opacity-20 text-white items-center relative h-9 tracking-wider sm:pt-0.5 md:pt-2 lg:pt-0.5 first::pt-0 duration-500 text-6xs md:text-base padding-huge opacity-100 hover:bg-opacity-70 rounded flex justify-center flex-row border border-gray-900 hover:shadow-green-500/20 cursor-pointer'
-                      >
-                        Connected:{String(walletAddress).substring(0, 6)}
-                        {"....."}
-                        {String(walletAddress).substring(39)}
-                      </div>
-                    ) : (
+                        <div className='px-4 bg-opacity-20 text-white items-center relative h-9 tracking-wider sm:pt-0.5 md:pt-2 lg:pt-0.5 first::pt-0 duration-500 text-6xs md:text-base padding-huge opacity-100 hover:bg-opacity-70 rounded flex justify-center flex-row border border-gray-900 hover:shadow-green-500/20 cursor-pointer'
+                        >
+                          {String(walletAddress).substring(0, 6)}
+                          {"....."}
+                          {String(walletAddress).substring(39)}
+                        </div>
+                      ) : (
 
-                      <button className='px-4 bg-titanium bg-opacity-100 text-gray-100 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 duration-500 text-2xs md:text-base padding-huge opacity-100 hover:bg-opacity-100 rounded flex justify-center flex-row bg-gradient-to-tl hover:from-greenn from-peach to-peach hover:to-bluee border-none hover:shadow-green-500/20 cursor-pointer' id="walletButton"
+                        <button className='px-4 bg-titanium bg-opacity-100 text-gray-100 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 duration-500 text-2xs md:text-base padding-huge opacity-100 hover:bg-opacity-100 rounded flex justify-center flex-row bg-gradient-to-tl hover:from-greenn from-peach to-peach hover:to-bluee border-none hover:shadow-green-500/20 cursor-pointer' id="walletButton"
 
-                        onClick={connectWalletPressed}
-                      >Connect
-                      </button>
-                    )}
-                  </li>
+                          onClick={connectWalletPressed}
+                        >Connect
+                        </button>
+                      )}
+                    </li>
 
 
-                </ul>
+                  </ul>
+                </div>
               </div>
             </section>
 
@@ -327,7 +330,7 @@ export default function Home() {
 
                   <div className='px-4 bg-opacity-20 text-white items-center relative h-9 tracking-wider sm:pt-0.5 md:pt-2 lg:pt-0.5 first::pt-0 duration-500 text-6xs md:text-base padding-huge opacity-100 hover:bg-opacity-70 rounded flex justify-center flex-row border border-gray-900 hover:shadow-green-500/20 cursor-pointer'
                   >
-                    Connected:{String(walletAddress).substring(0, 6)}
+                    {String(walletAddress).substring(0, 6)}
                     {"....."}
                     {String(walletAddress).substring(39)}
                   </div>
@@ -496,11 +499,11 @@ export default function Home() {
       </section>
 
 
-      {/*}
-      
-  <Team />
+
+
+
       <Footer />
-  */}
+
 
 
       {/* Content + footer Section */}

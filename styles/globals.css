@@ -88,6 +88,10 @@ html {
   background-size: cover;
 }
 
+.bg-footer {
+  background-color: #070524;
+}
+
 .titanium {
   background: rgb(219,219,217);
 background: linear-gradient(90deg, rgba(219,219,217,1) 0%, rgba(135,134,129,1) 35%, rgba(0,0,0,1) 100%);

@@ -134,7 +134,7 @@ export default function Home() {
             <div className='flex'>
               <Link className='w-min-content' href='/' passHref>
                 <a className='flex'>
-                  <img alt='' src='/images/TLBLogo.webp' className='h-[80px]' />
+                  <img alt='' src='/images/bull_logo.png' className='h-[80px]' />
 
                 </a>
               </Link>
@@ -146,6 +146,7 @@ export default function Home() {
           <nav>
 
             <section className="MOBILE-MENU flex lg:hidden">
+
               <div
                 className="HAMBURGER-ICON space-y-2"
                 onClick={() => setIsNavOpen((prev) => !prev)}
@@ -173,79 +174,82 @@ export default function Home() {
                     <line x1="6" y1="6" x2="18" y2="18" />
                   </svg>
                 </div>
-                <ul className="flex flex-col items-center justify-between min-h-[250px]">
-                  <li className="border-b text-black border-gray-400 my-2 uppercase">
-                    <a href="/about">The Backstory</a>
-                  </li>
-                  <li className="border-b text-black border-gray-400 my-2 uppercase">
-                    <a href="/portfolio">SpaceMap</a>
-                  </li>
-                  <li className="border-b text-black border-gray-400 my-2 uppercase">
-                    <a href="/contact">Benefits</a>
-                  </li>
-                  <li className="border-b text-black border-gray-400 my-2 uppercase">
-                    <a href="/contact">FAQ's</a>
-                  </li>
-                  <li className="border-b text-black border-gray-400 my-2 uppercase">
-                    <a href="/contact">Team</a>
-                  </li>
-                  <li className="border-b text-black border-gray-400 my-2 uppercase">
-                    <a href="/contact">Opensea</a>
-                  </li>
-                  <li className="border-b text-black border-gray-400 my-2 uppercase">
-                    <a href="/stake">Stake</a>
-                  </li>
-                  <li>
-                    {walletAddress.length > 0 ? (
+                <div className='bg-pattern p-20'>
+                  <ul className="flex flex-col items-center justify-between min-h-[250px]">
+                    <li className="border-b text-white border-gray-400 my-2 uppercase">
+                      <a href="#backstory">The Backstory</a>
+                    </li>
+                    <li className="border-b text-white border-gray-400 my-2 uppercase">
+                      <a href="#spacemap">SpaceMap</a>
+                    </li>
+                    <li className="border-b text-white border-gray-400 my-2 uppercase">
+                      <a href="#benefits">Benefits</a>
+                    </li>
+                    <li className="border-b text-white border-gray-400 my-2 uppercase">
+                      <a href="#faq">FAQ's</a>
+                    </li>
+                    <li className="border-b text-white border-gray-400 my-2 uppercase">
+                      <a href="#team">Team</a>
+                    </li>
+                    <li className="border-b text-white border-gray-400 my-2 uppercase">
+                      <a href="https://opensea.io">Opensea</a>
+                    </li>
+                    <li className="border-b text-white border-gray-400 my-2 uppercase">
+                      <a href="/stake">Stake</a>
+                    </li>
+                    <li>
+                      {walletAddress.length > 0 ? (
 
-                      <div className='px-4 bg-opacity-20 text-white items-center relative h-9 tracking-wider sm:pt-0.5 md:pt-2 lg:pt-0.5 first::pt-0 duration-500 text-6xs md:text-base padding-huge opacity-100 hover:bg-opacity-70 rounded flex justify-center flex-row border border-gray-900 hover:shadow-green-500/20 cursor-pointer'
-                      >
-                        Connected:{String(walletAddress).substring(0, 6)}
-                        {"....."}
-                        {String(walletAddress).substring(39)}
-                      </div>
-                    ) : (
+                        <div className='px-4 bg-opacity-20 text-white items-center relative h-9 tracking-wider sm:pt-0.5 md:pt-2 lg:pt-0.5 first::pt-0 duration-500 text-2xs md:text-base padding-huge opacity-100 hover:bg-opacity-70 rounded flex justify-center flex-row border border-gray-900 hover:shadow-green-500/20 cursor-pointer'
+                        >
+                          {String(walletAddress).substring(0, 4)}
+                          {"....."}
+                          {String(walletAddress).substring(39)}
+                        </div>
+                      ) : (
 
-                      <button className='px-4 bg-titanium bg-opacity-100 text-gray-100 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 duration-500 text-2xs md:text-base padding-huge opacity-100 hover:bg-opacity-100 rounded flex justify-center flex-row bg-gradient-to-tl hover:from-greenn from-peach to-peach hover:to-bluee border-none hover:shadow-green-500/20 cursor-pointer' id="walletButton"
+                        <button className='px-4 bg-titanium bg-opacity-100 text-gray-100 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 duration-500 text-2xs md:text-base padding-huge opacity-100 hover:bg-opacity-100 rounded flex justify-center flex-row bg-gradient-to-tl hover:from-greenn from-peach to-peach hover:to-bluee border-none hover:shadow-green-500/20 cursor-pointer' id="walletButton"
 
-                        onClick={connectWalletPressed}
-                      >Connect
-                      </button>
-                    )}
-                  </li>
+                          onClick={connectWalletPressed}
+                        >Connect
+                        </button>
+                      )}
+                    </li>
 
 
-                </ul>
+                  </ul>
+                </div>
               </div>
+
             </section>
 
             <ul className="DESKTOP-MENU hidden space-x-2 lg:flex">
               <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 bg-blue-200 duration-200 px-1 border-r hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                <a href='#backstory' className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 bg-blue-200 duration-200 px-1 border-r hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
                   <p className='rounded uppercase text-xs font-black
           text-white md:flex'>The Backstory</p>
                 </a>
               </li>
               <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 bg-blue-200 duration-200 px-1 border-r hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                <a href='#spacemap' className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 bg-blue-200 duration-200 px-1 border-r hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
                   <p className='rounded uppercase text-xs font-black
           text-white md:flex'>Space Map </p>
                 </a>
               </li>
               <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 border-r items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                <a href='#benefits' className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 border-r items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
                   <p className='rounded uppercase text-xs font-black
           text-white md:flex'>Benefits</p>
                 </a>
               </li>
               <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 border-r items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                <a href='#faq' className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 border-r items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
                   <p className='rounded uppercase text-sm font-black
           text-white md:flex'>FAQ's</p>
                 </a>
               </li>
               <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center border-r relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                <a href='#team' className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center border-r relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
                   <p className='rounded uppercase text-sm font-black
           text-white md:flex'>Team</p>
                 </a>
@@ -273,7 +277,7 @@ export default function Home() {
 
                   <div className='px-4 bg-opacity-20 text-white items-center relative h-9 tracking-wider sm:pt-0.5 md:pt-2 lg:pt-0.5 first::pt-0 duration-500 text-6xs md:text-base padding-huge opacity-100 hover:bg-opacity-70 rounded flex justify-center flex-row border border-gray-900 hover:shadow-green-500/20 cursor-pointer'
                   >
-                    Connected:{String(walletAddress).substring(0, 6)}
+                    {String(walletAddress).substring(0, 6)}
                     {"....."}
                     {String(walletAddress).substring(39)}
                   </div>
@@ -446,11 +450,12 @@ export default function Home() {
 
       <SpaceMap />
       <FAQ />
-      {/*}
-      
-  <Team />
+
+
+      <Team />
+
       <Footer />
-  */}
+
 
 
       {/* Content + footer Section */}
