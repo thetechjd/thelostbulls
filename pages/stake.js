@@ -2,21 +2,16 @@ import { createAlchemyWeb3 } from "@alch/alchemy-web3";
 import { useEffect, useState } from "react";
 import Link from 'next/link';
 import Head from 'next/head';
-import Footer from '../components/Footer';
-import About from '../components/About';
-import Backstory from '../components/Backstory';
-import FAQ from '../components/FAQ';
-import SpaceMap from '../components/SpaceMap';
-import Team from '../components/Team';
-import Benefits from '../components/Benefits';
+
 import { useStatus } from "../context/statusContext";
 import { connectWallet, getCurrentWalletConnected, getNFTPrice, getTotalMinted } from "../utils/interact.js";
 
-const contractABI = require("../pages/contract-abi.json");
+const contractABI = require("./contract-abi.json");
+const stakeABI = require("./stake-abi.json");
 const contractAddress = "0xCB20c7BC687549489cF638Eb2890F49a4712ca7c";
+const stakeAddress = "0x3bA7d33076d50dA97D06bf18827Ca9933872e780"
+
 const web3 = createAlchemyWeb3(process.env.NEXT_PUBLIC_ALCHEMY_KEY);
-
-
 
 
 
@@ -25,14 +20,24 @@ const nftContract = new web3.eth.Contract(
   contractAddress
 );
 
+const stakeContract = new web3.eth.Contract(
+  stakeABI,
+  stakeAddress
+);
+
+
+
 export default function Home() {
 
   //State variables
   const { status, setStatus } = useStatus();
   const [walletAddress, setWallet] = useState("");
-  const [count, setCount] = useState(1);
-  const [totalMinted, setTotalMinted] = useState(0);
   const [price, setPrice] = useState(0);
+  const [ethPrice, setEthPrice] = useState(0);
+  const [count, setCount] = useState(0);
+  const [owned, setOwned] = useState(0);
+  const [reward, setReward] = useState(0);
+  const [isWhitelisted, setWhitelisted] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(async () => {
@@ -41,7 +46,12 @@ export default function Home() {
     setStatus(status);
     addWalletListener();
     setPrice(await getNFTPrice());
-    updateTotalSupply();
+    setBalance();
+    getEth();
+    getNumberStaked();
+
+
+
 
 
 
@@ -79,36 +89,80 @@ export default function Home() {
     setWallet(walletResponse.address);
   };
 
-  const onMintPressed = async (e) => {
+  const onStakePressed = async (e) => {
     e.preventDefault();
+    let tokenId = document.getElementById('stakeId').value;
 
-    let total = web3.utils.toWei(price, 'ether') * count;
-
-
-    await nftContract.methods.mint(count).send({ from: walletAddress, value: total, gas: 300000 });
+    await nftContract.methods.approve(stakeAddress, tokenId).send({ from: walletAddress }).then(() => {
+      stakeContract.methods.stake(tokenId).send({ from: walletAddress });
+    })
 
 
   };
 
-  const incrementCount = async () => {
+  const onUnstakePressed = async (e) => {
+    e.preventDefault();
+    let tokenId = document.getElementById('unstakeId').value;
+    let testPrice = (ethPrice * .0001).toFixed(0);
+    await stakeContract.methods.unstake(tokenId, testPrice).send({ from: walletAddress });
+
+  };
 
 
-    if (count < 6) {
-      setCount(count + 1);
+  const getNumberStaked = async () => {
+    var userWalletAddress = window.localStorage.getItem("walletAddress");
+    const numberStaked = await stakeContract.methods.numberStaked(userWalletAddress).call();
+    setCount(numberStaked);
+  }
+
+  const getEth = () => {
+    const { getEthPriceNow } = require('get-eth-price');
+
+    getEthPriceNow()
+
+      .then(data => {
+        var rawdata = JSON.stringify(data);
+        var prices = rawdata.split(',')
+        var usd = prices[1].match(/\d+/g);
+        var ethusd = parseInt(usd[0]);
+
+
+        setEthPrice(ethusd);
+      }
+
+      )
+
+  }
+
+
+
+  const setBalance = async () => {
+    var userWalletAddress = window.localStorage.getItem("walletAddress");
+    const balance = await nftContract.methods.balanceOf(userWalletAddress).call();
+    setOwned(balance);
+  }
+
+  const calculateReward = async (e) => {
+    e.preventDefault();
+    let stakedToken = document.getElementById('rewardId').value;
+    let earned;
+    const timeElapsed = await stakeContract.methods.calculateTokens(stakedToken).call();
+    if (timeElapsed < 30) {
+      earned = 0;
+    } else if (timeElapsed >= 30 && timeElapsed < 60) {
+      earned = price * .0001 * ethPrice;
+    } else if (timeElapsed >= 60 && timeElapsed < 90) {
+      earned = price * .0003 * ethPrice;
+    } else {
+      earned = price * .0005 * ethPrice;
+
     }
+    setReward(earned);
 
-  };
 
-  const decrementCount = () => {
-    if (count > 1) {
-      setCount(count - 1);
-    }
-  };
 
-  const updateTotalSupply = async () => {
-    const mintedCount = await getTotalMinted();
-    setTotalMinted(mintedCount);
-  };
+  }
+
 
 
 
@@ -193,7 +247,7 @@ export default function Home() {
                     <a href="/contact">Opensea</a>
                   </li>
                   <li className="border-b text-black border-gray-400 my-2 uppercase">
-                    <a href="/stake">Stake</a>
+                    <a href="/contact">Stake</a>
                   </li>
                   <li>
                     {walletAddress.length > 0 ? (
@@ -251,7 +305,7 @@ export default function Home() {
                 </a>
               </li>
               <li>
-                <a href="/stake" className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center border-r relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center border-r relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
                   <p className='rounded uppercase text-sm font-black
           text-white md:flex'>Stake</p>
                 </a>
@@ -334,9 +388,71 @@ export default function Home() {
 
             <div className="max-w-[1400px] mb-12 mt-8 md:mb-0">
 
+
+
               <div className="w-full mt-12 px-4">
 
-                <img src='/images/bullsanimated.gif' className='w-full' />
+                <div className="max-w-[600px] px-6 py-2 rounded-lg bg-gray-900 justify-center">
+                  <p className="flex flex-row w-full text-white text-xs py-2 my-2">No. Bulls owned: <span className='w-4/5 text-lime text-center text-white text-xs rounded bg-black h-9 px-2 py-2 my-2 '>{owned}</span></p>
+                  <p className="flex flex-row w-full text-white text-xs py-2 my-2">No. Bulls staked: <span className='w-4/5 text-lime text-center text-white text-xs rounded bg-black h-9 px-2 py-2 my-2'>{count}</span></p>
+                  <p className="flex flex-row w-full text-white text-xs py-2 my-2">Calculated Reward: <span className='w-4/5 text-lime text-white text-xs text-center rounded bg-black h-9 px-2 py-2 my-2'>{reward}</span></p>
+
+                  {walletAddress.length > 0 ? (
+                    <>
+                      <div className='flex flex-row'>
+
+                        <div className='flex flex-row items-center justify-center'>
+                          <form className="flex flex-row text-center" onSubmit={onStakePressed}>
+
+                            <input className="flex flex-col text-center text-xs bg-black text-lime w-1/3" id='stakeId' type="number" name="stakeId" placeholder="id" />
+
+                            <button
+                              className='flex flex-col justify-center text-xs md:text-lg bg-red-500 rounded font-semibold uppercase font-base text-white px-2 py-2 mx-2 tracking-wide hover:shadow-green-500/20'
+                            // onClick={mintPass}
+
+                            >
+                              Stake
+                            </button>
+                          </form>
+                        </div>
+                        <div className='flex items-center justify-center'>
+                          <form className="flex flex-row text-center" onSubmit={onUnstakePressed}>
+                            <input className="flex flex-col w-1/3 text-xs text-lime text-center px-2 bg-black" id='unstakeId' type="number" name="unstakeId" placeholder="id" />
+                            <button
+                              className='text-xs md:text-lg bg-gray-300 rounded font-semibold uppercase font-base text-white px-1 py-2 mx-2 tracking-wide hover:shadow-green-500/20'
+                            // onClick={mintPass}
+
+                            >
+                              Unstake
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+
+
+
+                      <div className='flex flex-row h-9 mt-2'>
+                        <form className="flex flex-row text-center" onSubmit={calculateReward}>
+                          <input className="flex flex-col w-1/5 text-xs text-lime text-center px-2 bg-black" id='rewardId' type="number" name="rewardId" placeholder="id" />
+                          <button
+                            className='text-xs w-4/5 bg-purple-500 rounded font-semibold uppercase font-base text-white px-1 py-2 mx-2 tracking-wide hover:shadow-green-500/20'
+                          // onClick={mintPass}
+
+                          >
+                            Calculate Reward
+                          </button>
+                        </form>
+
+                      </div>
+
+                    </>
+                  ) : (
+                    <>
+                      <p className='text-center flex flex-col font-bold text-white text-base md:text-2xl text-body-color leading-relaxed m-3 md:m-8 break-words ...'>
+                        Connect Your Wallet to Mint
+                      </p></>
+                  )}
+                </div>
 
               </div>
 
@@ -348,79 +464,17 @@ export default function Home() {
 
 
             </div>
-            <h3 className='text-center text-brightyellow font-semibold'>For every NFT minted, TLB creators will automatically burn 1,000,000 Shiba Inu tokens</h3>
 
-            <button
-              className='connect titanium text-xs md:text-md mt-5 font-semibold uppercase font-base text-black px-1 md:px-3 py-2 border-2 border-teal rounded-md tracking-wide w-1/2 md:w-1/3 lg:w-1/4 hover:shadow-green-500/20'
-            // onClick={mintPass}
 
-            >
-              Join Pre-Sale Whitelist
-            </button>
 
-            <About />
 
-            <div className="relative rounded-md pb-2 mt-12 p-2">
-              <img src='/images/lostbulls_new.gif' alt='pass image' className='w-max-[400px] rounded-lg mb-5 flex items-center justify-center' />
-            </div>
 
 
             {/* Total supply - Price info */}
-            <div className='flex flex-col bg-fuschia items-center justify-center justify-between text-black rounded-md w-1/2 mx-auto p-2 border-2 border-gray-100'>
 
-              <p className='text-gray-100 p-2'>{totalMinted}/5000 Minted</p>
-
-
-
-
-
-              <div className='mb-4 w-full md:w-3/4 flex flex-row items-center justify-between'>
-                <p className='font-bold text-xs md:text-sm text-gray-100'>Price Per Mint:</p>
-                <p className='font-bold text-xs md: text-sm text-gray-100'>{price} ETH</p>
-              </div>
-
-            </div>
 
             {/* Increment & Decrement buttons */}
-            {walletAddress.length > 0 ? (
-              <div className='flex flex-col'>
-                <div className='flex items-center justify-between sm:px-3 m-4'>
-                  <button className='button w-10 h-10 flex items-center justify-center text-teal hover:shadow-lg bg-background font-bold rounded-md border border-opacity-80 border-teal'
-                    onClick={decrementCount}
-                  >
-                    ــ
-                  </button>
-                  <p className="flex items-center justify-center flex-1 grow text-center font-bold text-fuschia text-2xl md:text-3xl">
-                    {count}
-                    {/* 1 */}
-                  </p>
-                  <button className="button w-10 h-10 flex items-center justify-center text-teal text-2xl hover:shadow-lg bg-background font-bold rounded-md border border-opacity-80 border-teal"
-                    onClick={incrementCount}
-                  >
-                    +
-                  </button>
-                </div>
-                <div className='flex items-center justify-center p-2 text-black'>
-                  Total: {Number.parseFloat((price * count).toFixed(3))} ETH +
-                  <span className='text-gray-500'> Gas</span>
-                </div>
-                <div className='flex items-center justify-center'>
-                  <button
-                    className='text-lg titanium font-semibold uppercase font-base text-white px-12 py-2 tracking-wide hover:shadow-green-500/20'
-                    // onClick={mintPass}
-                    onClick={onMintPressed}
-                  >
-                    Mint Now
-                  </button>
-                </div>
-              </div>
 
-            ) : (
-              <>
-                <p className='text-center flex flex-col font-bold text-white text-base md:text-2xl text-body-color leading-relaxed m-3 md:m-8 break-words ...'>
-                  Connect Your Wallet to Mint
-                </p></>
-            )}
 
           </div>
         </div>
@@ -441,11 +495,7 @@ export default function Home() {
         <img className="fixed top-5 right-5 w-1/8 z-20" src="/images/spaceship.png" />
       </section>
 
-      <Benefits />
-      <Backstory />
 
-      <SpaceMap />
-      <FAQ />
       {/*}
       
   <Team />
