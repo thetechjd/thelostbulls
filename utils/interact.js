@@ -4,7 +4,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(process.env.NEXT_PUBLIC_ALCHEMY_KEY);
 
 const contractABI = require("../pages/contract-abi.json");
-const contractAddress = "0xfD803715f57F8d179A09d260bC3F568C36d259C6";
+const contractAddress = "0xCB20c7BC687549489cF638Eb2890F49a4712ca7c";
 
 const nftContract = new web3.eth.Contract(
     contractABI,
