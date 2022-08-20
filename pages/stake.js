@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Footer from '../components/Footer';
 
 import { useStatus } from "../context/statusContext";
-import { connectWallet, getCurrentWalletConnected, getNFTPrice, getTotalMinted } from "../utils/interact.js";
+import { connectWallet, getCurrentWalletConnected, getNFTPrice, getTotalMinted, getBalance } from "../utils/interact.js";
 
 const contractABI = require("./contract-abi.json");
 const stakeABI = require("./stake-abi.json");
@@ -46,14 +46,12 @@ export default function Home() {
     const { address, status } = await getCurrentWalletConnected();
     setWallet(address)
     setStatus(status);
-    var userWalletAddress = window.localStorage.getItem("walletAddress");
-    console.log("userWalletAddress in MyNFT.js", userWalletAddress)
-    setUserAddress(userWalletAddress);
     addWalletListener();
     setPrice(await getNFTPrice());
-    setBalance();
-    getEth();
+    getBalance();
     getNumberStaked();
+    getEth();
+
 
 
 
@@ -113,10 +111,17 @@ export default function Home() {
 
   };
 
+  const getBalance = async () => {
+
+
+    const balance = await nftContract.methods.balanceOf(String(walletAddress)).call();
+    setOwned(balance);
+  }
+
 
   const getNumberStaked = async () => {
-    var userWalletAddress = window.localStorage.getItem("walletAddress");
-    const numberStaked = await stakeContract.methods.numberStaked(userWalletAddress).call();
+
+    const numberStaked = await stakeContract.methods.numberStaked(String(walletAddress)).call();
     setCount(numberStaked);
   }
 
@@ -141,11 +146,7 @@ export default function Home() {
 
 
 
-  const setBalance = async () => {
-    var userWalletAddress = window.localStorage.getItem("walletAddress");
-    const balance = await nftContract.methods.balanceOf(userWalletAddress).call();
-    setOwned(balance);
-  }
+
 
   const calculateReward = async (e) => {
     e.preventDefault();

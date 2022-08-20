@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import ReactDOM from "react-dom";
 import { StatusProvider } from "../context/statusContext"
 
 function MyApp({ Component, pageProps }) {
