@@ -412,7 +412,7 @@ export default function Home() {
 
 
                       <button
-                        className='flex flex-col items-right text-xs md:text-sm bg-blue-200 rounded font-semibold uppercase font-base text-white px-2 py-2 mx-2 tracking-wide hover:shadow-green-500/20'
+                        className='flex flex-col items-right text-xs md:text-sm bg-blue-400 rounded font-semibold uppercase font-base text-white px-2 py-2 mx-2 tracking-wide hover:shadow-green-500/20'
                         // onClick={mintPass}
                         onClick={updateBalance}
 
