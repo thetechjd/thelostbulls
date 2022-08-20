@@ -12,7 +12,7 @@ const stakeABI = require("./stake-abi.json");
 const contractAddress = "0xCB20c7BC687549489cF638Eb2890F49a4712ca7c";
 const stakeAddress = "0x3bA7d33076d50dA97D06bf18827Ca9933872e780"
 
-const web3 = createAlchemyWeb3(process.env.NEXT_PUBLIC_ALCHEMY_KEY);
+const web3 = createAlchemyWeb3("https://eth-rinkeby.alchemyapi.io/v2/deSJ7VyGLswml7dz5tzzNbHBeYu_R_S1");
 
 
 
