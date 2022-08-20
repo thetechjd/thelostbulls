@@ -48,8 +48,6 @@ export default function Home() {
     setStatus(status);
     addWalletListener();
     setPrice(await getNFTPrice());
-    getBalance();
-    getNumberStaked();
     getEth();
 
 
@@ -111,17 +109,22 @@ export default function Home() {
 
   };
 
+  const updateBalance = async () => {
+    getBalance();
+    getNumberStaked();
+
+  }
   const getBalance = async () => {
 
 
-    const balance = await nftContract.methods.balanceOf(String(walletAddress)).call();
+    const balance = await nftContract.methods.balanceOf(walletAddress).call();
     setOwned(balance);
   }
 
 
   const getNumberStaked = async () => {
 
-    const numberStaked = await stakeContract.methods.numberStaked(String(walletAddress)).call();
+    const numberStaked = await stakeContract.methods.numberStaked(walletAddress).call();
     setCount(numberStaked);
   }
 
@@ -401,6 +404,28 @@ export default function Home() {
               <div className="w-full mt-12 px-4">
 
                 <div className="max-w-[600px] px-6 py-2 rounded-lg bg-gray-900 justify-center">
+                  {walletAddress.length > 0 ? (
+
+
+
+                    <div className='flex flex-row items-right justify-end'>
+
+
+                      <button
+                        className='flex flex-col items-right text-xs md:text-sm bg-blue-200 rounded font-semibold uppercase font-base text-white px-2 py-2 mx-2 tracking-wide hover:shadow-green-500/20'
+                        // onClick={mintPass}
+                        onClick={updateBalance}
+
+                      >
+                        Refresh
+                      </button>
+
+                    </div>
+                  ) : (
+                    <></>
+                  )
+                  }
+
                   <p className="flex flex-row w-full text-white text-xs py-2 my-2">No. Bulls owned: <span className='w-4/5 text-lime text-center text-white text-xs rounded bg-black h-9 px-2 py-2 my-2 '>{owned}</span></p>
                   <p className="flex flex-row w-full text-white text-xs py-2 my-2">No. Bulls staked: <span className='w-4/5 text-lime text-center text-white text-xs rounded bg-black h-9 px-2 py-2 my-2'>{count}</span></p>
                   <p className="flex flex-row w-full text-white text-xs py-2 my-2">Calculated Reward: <span className='w-4/5 text-lime text-white text-xs text-center rounded bg-black h-9 px-2 py-2 my-2'>{reward}</span></p>
@@ -457,7 +482,7 @@ export default function Home() {
                   ) : (
                     <>
                       <p className='text-center flex flex-col font-bold text-white text-base md:text-2xl text-body-color leading-relaxed m-3 md:m-8 break-words ...'>
-                        Connect Your Wallet to Mint
+                        Connect Your Wallet to Stake
                       </p></>
                   )}
                 </div>
