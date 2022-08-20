@@ -11,7 +11,7 @@ export default function About() {
 
             </div>
             <div className='about px-16 py-8 text-white text-sm text-center bg-gray-900 rounded-md border-4 border-lime'>
-                <p className="mb-3">The Lost Bulls (TLB) is an NFT collection of 5,000 unique part-skeleton bulls living on the Ethereum blockchain as ERC-721 tokens. Each part-skeleton bull possesses a distinct combination of attributes from a total of 68 traits.</p>
+                <p className="mb-3">The Lost Bulls (TLB) is an NFT collection of 5,000 unique part-skeleton bulls living on the Ethereum blockchain as ERC-721 tokens. Each part-skeleton bull possesses a distinct combination of attributes from a total of 67 traits.</p>
                 <p className="mb-3">TLB was designed with a symbolic meaning behind it.  It symbolizes the two different crypto markets, Bull and Bear.  The bull part of the body indicates the Bull market, and the skeleton part signifies being "Lost" or waiting for something optimistic to happen, hence the Bear market.</p>
                 <p className="mb-3">When you buy one of the TLB NFTs, you are not only buying a unique digital art piece with symbolism connected to it. You are also taking part in all of its beneficial features.</p>
             </div>
