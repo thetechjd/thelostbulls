@@ -111,8 +111,7 @@ export default function Home() {
 
 
   const getNumberStaked = async () => {
-    var userWalletAddress = walletAddress;
-    const numberStaked = await stakeContract.methods.numberStaked(userWalletAddress).call();
+    const numberStaked = await stakeContract.methods.numberStaked(walletAddress).call();
     setCount(numberStaked);
   }
 
@@ -138,8 +137,7 @@ export default function Home() {
 
 
   const setBalance = async () => {
-    var userWalletAddress = walletAddress;
-    const balance = await nftContract.methods.balanceOf(userWalletAddress).call();
+    const balance = await nftContract.methods.balanceOf(walletAddress).call();
     setOwned(balance);
   }
 
