@@ -38,6 +38,7 @@ export default function Home() {
   const [count, setCount] = useState(0);
   const [owned, setOwned] = useState(0);
   const [reward, setReward] = useState(0);
+  const [userAddress, setUserAddress] = useState('');
   const [isWhitelisted, setWhitelisted] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -45,10 +46,14 @@ export default function Home() {
     const { address, status } = await getCurrentWalletConnected();
     setWallet(address)
     setStatus(status);
+    var userWalletAddress = window.localStorage.getItem("walletAddress");
+    console.log("userWalletAddress in MyNFT.js", userWalletAddress)
+    setUserAddress(userWalletAddress);
     addWalletListener();
     setPrice(await getNFTPrice());
+    setBalance();
     getEth();
-
+    getNumberStaked();
 
 
 
@@ -87,8 +92,6 @@ export default function Home() {
     const walletResponse = await connectWallet();
     setStatus(walletResponse.status);
     setWallet(walletResponse.address);
-    setBalance();
-    getNumberStaked();
   };
 
   const onStakePressed = async (e) => {
@@ -112,7 +115,8 @@ export default function Home() {
 
 
   const getNumberStaked = async () => {
-    const numberStaked = await stakeContract.methods.numberStaked(walletAddress).call();
+    var userWalletAddress = window.localStorage.getItem("walletAddress");
+    const numberStaked = await stakeContract.methods.numberStaked(userWalletAddress).call();
     setCount(numberStaked);
   }
 
@@ -138,7 +142,8 @@ export default function Home() {
 
 
   const setBalance = async () => {
-    const balance = await nftContract.methods.balanceOf(walletAddress).call();
+    var userWalletAddress = window.localStorage.getItem("walletAddress");
+    const balance = await nftContract.methods.balanceOf(userWalletAddress).call();
     setOwned(balance);
   }
 
