@@ -47,9 +47,8 @@ export default function Home() {
     setStatus(status);
     addWalletListener();
     setPrice(await getNFTPrice());
-    setBalance();
     getEth();
-    getNumberStaked();
+
 
 
 
@@ -88,6 +87,8 @@ export default function Home() {
     const walletResponse = await connectWallet();
     setStatus(walletResponse.status);
     setWallet(walletResponse.address);
+    setBalance();
+    getNumberStaked();
   };
 
   const onStakePressed = async (e) => {
