@@ -113,11 +113,4 @@ export const getTotalMinted = async () => {
     return totalMinted
 }
 
-export const getBalance = async () => {
-    const balance = await nftContract.methods.balanceOf().call()
-    return balance
-}
-
-
-
 

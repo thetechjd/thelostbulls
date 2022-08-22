@@ -34,7 +34,7 @@ export default function FAQ() {
                 <details className="accordion">
                     <summary className="">Once I mint a TLB NFT, where can I resell it?</summary>
                     <div className="">
-                        <p>A: </p>
+                        <p>A: For best experience, we recommend reselling on OpenSea. However, you can resell TLB on any Ethereum NFT marketplace.</p>
                     </div>
                 </details>
                 <details className="accordion">
@@ -46,13 +46,13 @@ export default function FAQ() {
                 <details className="accordion">
                     <summary className="">Where are the staked NFTs locked?</summary>
                     <div className="">
-                        <p>A: </p>
+                        <p>A: All staked NFTs are locked in the staking contract.</p>
                     </div>
                 </details>
                 <details className="accordion">
                     <summary className="">Can NFT's purchased from secondary sales also be staked?</summary>
                     <div className="">
-                        <p>A: </p>
+                        <p>A: Yes.</p>
                     </div>
                 </details>
                 <details className="accordion">
@@ -64,7 +64,7 @@ export default function FAQ() {
                 <details className="accordion">
                     <summary className="">How can I join The Lost Bulls community?</summary>
                     <div className="">
-                        <p>A: You can join our Discord. Simply click the "Join Our Discord" link on this site.</p>
+                        <p>A: You can join our Discord. Simply click the Discord icon.</p>
                     </div>
                 </details>
                 <details className="accordion">
