@@ -239,14 +239,15 @@ export default function Home() {
                 <div className='bg-pattern p-20'>
                   <ul className="flex flex-col items-center justify-between min-h-[250px]">
                     <li className="border-b text-white border-gray-400 my-2 uppercase">
-                      <a href="/about">The Backstory</a>
+                      <a href="/contact" >Benefits</a>
+                    </li>
+                    <li className="border-b text-white border-gray-400 my-2 uppercase">
+                      <a href="/about">Backstory</a>
                     </li>
                     <li className="border-b text-white border-gray-400 my-2 uppercase">
                       <a href="/portfolio">SpaceMap</a>
                     </li>
-                    <li className="border-b text-white border-gray-400 my-2 uppercase">
-                      <a href="/contact">Benefits</a>
-                    </li>
+
                     <li className="border-b text-white border-gray-400 my-2 uppercase">
                       <a href="/contact">FAQ's</a>
                     </li>
@@ -286,23 +287,24 @@ export default function Home() {
 
             <ul className="DESKTOP-MENU hidden space-x-2 lg:flex">
               <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 bg-blue-200 duration-200 px-1 border-r hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
-                  <p className='rounded uppercase text-xs font-black
-          text-white md:flex'>The Backstory</p>
-                </a>
-              </li>
-              <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 bg-blue-200 duration-200 px-1 border-r hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
-                  <p className='rounded uppercase text-xs font-black
-          text-white md:flex'>Space Map </p>
-                </a>
-              </li>
-              <li>
                 <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 border-r items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
                   <p className='rounded uppercase text-xs font-black
           text-white md:flex'>Benefits</p>
                 </a>
               </li>
+              <li>
+                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 bg-blue-200 duration-200 px-1 border-r hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                  <p className='rounded uppercase text-xs font-black
+          text-white md:flex'>Backstory</p>
+                </a>
+              </li>
+              <li>
+                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 bg-blue-200 duration-200 px-1 border-r hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                  <p className='rounded uppercase text-xs font-black
+          text-white md:flex'>SpaceMap </p>
+                </a>
+              </li>
+
               <li>
                 <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 border-r items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
                   <p className='rounded uppercase text-sm font-black
@@ -397,13 +399,13 @@ export default function Home() {
           <div className="w-full flex flex-col items-center ">
 
 
-            <div className="max-w-[1400px] mb-12 mt-8 md:mb-0">
+            <div className="w-full mb-12 mt-8 md:mb-0">
 
 
 
-              <div className="w-full mt-12 px-4">
+              <div className="w-full mt-12 px-4 items-center justify-center">
 
-                <div className="max-w-[600px] px-6 py-2 rounded-lg bg-gray-900 justify-center">
+                <div className="max-w-[600px] px-6 py-2 rounded-lg bg-gray-900 items-center justify-center">
                   {walletAddress.length > 0 ? (
 
 
@@ -485,9 +487,26 @@ export default function Home() {
                         Connect Your Wallet to Stake
                       </p></>
                   )}
+
+                  <div className='justify-center items-center mt-5 text-white text-sm bg-gray-900 rounded-md border-4 border-lime'>
+
+                    <ul className=''>
+                      <li className='px-8 text-xs'>Please verify you have the correct tokenId before staking or transaction will revert.</li>
+                      <li className='mx-12 p-2 list-disc'>1 month: 1% ETH</li>
+                      <li className='mx-12 p-2 list-disc'>2 month term: 3% ETH</li>
+                      <li className='mx-12 p-2 list-disc'>3 month term: 5% ETH</li>
+                    </ul>
+
+
+                  </div>
                 </div>
 
+
               </div>
+
+
+
+
 
 
 

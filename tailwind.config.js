@@ -42,6 +42,7 @@ module.exports = {
         greenn: 'var(--clr-green)',
         lime: '#00ff77',
         titanium: '#878681',
+        aqua: '#31cadc',
         background: 'var(--clr-background)'
       },
     },

@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Footer from '../components/Footer';
 import About from '../components/About';
 import Backstory from '../components/Backstory';
+import GiveBack from '../components/GiveBack';
 import FAQ from '../components/FAQ';
 import SpaceMap from '../components/SpaceMap';
 import Team from '../components/Team';
@@ -93,7 +94,7 @@ export default function Home() {
   const incrementCount = async () => {
 
 
-    if (count < 6) {
+    if (count < 3) {
       setCount(count + 1);
     }
 
@@ -176,15 +177,17 @@ export default function Home() {
                 </div>
                 <div className='bg-pattern p-20'>
                   <ul className="flex flex-col items-center justify-between min-h-[250px]">
+
                     <li className="border-b text-white border-gray-400 my-2 uppercase">
-                      <a href="#backstory">The Backstory</a>
+                      <a href="#benefits">Benefits</a>
+                    </li>
+                    <li className="border-b text-white border-gray-400 my-2 uppercase">
+                      <a href="#backstory">Backstory</a>
                     </li>
                     <li className="border-b text-white border-gray-400 my-2 uppercase">
                       <a href="#spacemap">SpaceMap</a>
                     </li>
-                    <li className="border-b text-white border-gray-400 my-2 uppercase">
-                      <a href="#benefits">Benefits</a>
-                    </li>
+
                     <li className="border-b text-white border-gray-400 my-2 uppercase">
                       <a href="#faq">FAQ's</a>
                     </li>
@@ -224,24 +227,26 @@ export default function Home() {
             </section>
 
             <ul className="DESKTOP-MENU hidden space-x-2 lg:flex">
-              <li>
-                <a href='#backstory' className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 bg-blue-200 duration-200 px-1 border-r hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
-                  <p className='rounded uppercase text-xs font-black
-          text-white md:flex'>The Backstory</p>
-                </a>
-              </li>
-              <li>
-                <a href='#spacemap' className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 bg-blue-200 duration-200 px-1 border-r hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
-                  <p className='rounded uppercase text-xs font-black
-          text-white md:flex'>Space Map </p>
-                </a>
-              </li>
+
               <li>
                 <a href='#benefits' className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 border-r items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
                   <p className='rounded uppercase text-xs font-black
           text-white md:flex'>Benefits</p>
                 </a>
               </li>
+              <li>
+                <a href='#backstory' className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 bg-blue-200 duration-200 px-1 border-r hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                  <p className='rounded uppercase text-xs font-black
+          text-white md:flex'>Backstory</p>
+                </a>
+              </li>
+              <li>
+                <a href='#spacemap' className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider px-1 pt-0.5 first::pt-0 uppercase text-2xs font-500 bg-blue-200 duration-200  border-r hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                  <p className='rounded uppercase text-xs font-black
+          text-white md:flex'>SpaceMap </p>
+                </a>
+              </li>
+
               <li>
                 <a href='#faq' className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 border-r items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
                   <p className='rounded uppercase text-sm font-black
@@ -336,7 +341,7 @@ export default function Home() {
           <div className="w-full flex flex-col items-center ">
 
 
-            <div className="max-w-[1400px] mb-12 mt-8 md:mb-0">
+            <div className="w-full mb-12 mt-8 md:mb-0">
 
               <div className="w-full mt-12 px-4">
 
@@ -370,7 +375,7 @@ export default function Home() {
 
 
             {/* Total supply - Price info */}
-            <div className='flex flex-col bg-fuschia items-center justify-center justify-between text-black rounded-md w-1/2 mx-auto p-2 border-2 border-gray-100'>
+            <div className='flex flex-col bg-aqua items-center justify-center justify-between text-black rounded-md w-1/2 mx-auto p-2 border-2 border-gray-100'>
 
               <p className='text-gray-100 p-2'>{totalMinted}/5000 Minted</p>
 
@@ -450,7 +455,7 @@ export default function Home() {
 
       <SpaceMap />
       <FAQ />
-
+      <GiveBack />
 
       <Team />
 
