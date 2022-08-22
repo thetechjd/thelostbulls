@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Backstory() {
     return (
-        <div id='backstory' className='bg-pattern pt-5 pb-12 px-8 flex flex-col justify-between'>
+        <div id='backstory' className='bg-pattern -mr-14 md:mr-0 pt-5 pb-12 px-8 flex flex-col justify-between'>
             <h2 className='text-center text-6xl py-6'>The Backstory</h2>
             <div className='px-16 py-8 text-white text-sm text-center bg-gray-900 rounded-md border-4 border-lime'>
                 <p className="text-center pt-5">The world of the Bulls was unstable—their grasslands withered into deserts just as quickly as their deserts bloomed into grasslands. In desperate need of a new, stable home, 5,000 Bulls boarded a spaceship and jettisoned off.</p>

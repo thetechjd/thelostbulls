@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Benefits() {
     return (
-        <div id='benefits' className='bg-pattern pt-5 pb-12 px-8 flex flex-col justify-between'>
+        <div id='benefits' className='bg-pattern -mr-14 md:mr-0 pt-5 pb-12 px-8 flex flex-col justify-between'>
             <h2 className='text-center text-6xl py-6'>TLB Benefits</h2>
             <div className='px-4 py-8 text-white text-sm bg-gray-900 rounded-md border-4 border-lime'>
 

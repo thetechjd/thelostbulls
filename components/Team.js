@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Team() {
     return (
-        <div id='team' className='bg-pattern pt-5 pb-12 px-8 flex flex-col items-center justify-center'>
+        <div id='team' className='bg-pattern -mr-14 md:mr-0 pt-5 pb-12 px-8 flex flex-col items-center justify-center'>
             <h2 className='text-center text-6xl py-6'>The Team</h2>
             <div className='px-4 py-8 text-white text-sm bg-gray-900 flex flex-col items-center rounded-md border-4 border-lime'>
 
