@@ -6,7 +6,7 @@ export default function About() {
 
             <div className='flex flex-row items-center text-center justify-between'>
                 <img src='https://static.wixstatic.com/media/849138_273ce078870c4038bf0104473524f6c6~mv2.png/v1/fill/w_306,h_306,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/male%20bull%20in%20spaceship.png' className='hidden md:flex sm:w-[300px]' />
-                <h2 className='text-white text-6xl text-center'>About The Lost Bulls</h2>
+                <h2 className='text-white text-5xl text-center'>About The Lost Bulls</h2>
                 <img src='https://static.wixstatic.com/media/849138_f3380bd2815d4783a1ba033b818f7215~mv2.png/v1/fill/w_330,h_330,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/female%20bull%20in%20spaceship.png' className='hidden md:flex sm:w-[300px]' />
 
             </div>
