@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function GiveBack() {
+export default function Give-Back() {
     return (
         <div id='giveback' className='bg-pattern -mr-14 md:mr-0 pt-5 pb-12 px-8 flex flex-col items-center justify-center'>
             <h2 className='text-center text-6xl py-6'>TLB's Give-Back Program</h2>
