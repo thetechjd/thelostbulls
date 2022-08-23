@@ -186,7 +186,7 @@ export default function Home() {
       </Head>
 
       {/* Header */}
-      <header className='fixed w-full top-0 md:px-8 px-5 pt-5 pb-3 z-70 transition-colors duration-500 z-40 flex-none md:z-50 bg-white/35'>
+      <header className='fixed w-full top-0 md:px-8 px-5 pt-5 pb-3 z-70 transition-colors duration-500 z-40 flex-none md:z-50 bg-header'>
 
         {/* Header Container */}
         <div className='flex h-full items-center justify-center max-w-11xl mx-auto border-opacity-0'>
@@ -251,7 +251,7 @@ export default function Home() {
                     <li className="border-b text-white border-gray-400 my-2 uppercase">
                       <a href="./#faq">FAQ's</a>
                     </li>
-                    <li className="border-b text-white border-gray-400 my-2 uppercase">
+                    <li className="border-b text-white text-xs border-gray-400 my-2 uppercase">
                       <a href="./#giveback">GiveBack</a>
                     </li>
                     <li className="border-b text-white border-gray-400 my-2 uppercase">
@@ -317,7 +317,7 @@ export default function Home() {
               <li>
                 <a href="./#giveback" className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 border-r items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
                   <p className='rounded uppercase text-xs font-black
-          text-white md:flex'>Giveback</p>
+          text-white md:flex'>GiveBack</p>
                 </a>
               </li>
               <li>
@@ -553,7 +553,7 @@ export default function Home() {
         {/* Right Hero Section - Video/Image Bird PASS */}
 
         <img className="fixed bottom-0 left-0 w-1/5 z-20" src="/images/mainbull.png" />
-        <img className="fixed top-5 right-5 w-1/8 z-20" src="/images/spaceship.png" />
+        {/* <img className="fixed top-5 right-5 w-1/8 z-20" src="/images/spaceship.png" />*/}
       </section>
 
 

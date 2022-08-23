@@ -124,7 +124,7 @@ export default function Home() {
       </Head>
 
       {/* Header */}
-      <header className='fixed w-full top-0 md:px-8 px-5 pt-5 pb-3 z-70 transition-colors duration-500 z-40 flex-none md:z-50 bg-white/35'>
+      <header className='fixed w-full top-0 md:px-8 px-5 pt-5 pb-3 z-70 transition-colors duration-500 z-40 flex-none md:z-50 bg-header'>
 
         {/* Header Container */}
         <div className='flex h-full items-center justify-center max-w-11xl mx-auto border-opacity-0'>
