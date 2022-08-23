@@ -236,29 +236,32 @@ export default function Home() {
                     <line x1="6" y1="6" x2="18" y2="18" />
                   </svg>
                 </div>
-                <div className='bg-pattern p-20'>
+                <div className=''>
                   <ul className="flex flex-col items-center justify-between min-h-[250px]">
                     <li className="border-b text-white border-gray-400 my-2 uppercase">
-                      <a href="/contact" >Benefits</a>
+                      <a href="./#benefits" >Benefits</a>
                     </li>
                     <li className="border-b text-white border-gray-400 my-2 uppercase">
-                      <a href="/about">Backstory</a>
+                      <a href="./#backstory">Backstory</a>
                     </li>
                     <li className="border-b text-white border-gray-400 my-2 uppercase">
-                      <a href="/portfolio">SpaceMap</a>
+                      <a href="./#spacemap">SpaceMap</a>
                     </li>
 
                     <li className="border-b text-white border-gray-400 my-2 uppercase">
-                      <a href="/contact">FAQ's</a>
+                      <a href="./#faq">FAQ's</a>
                     </li>
                     <li className="border-b text-white border-gray-400 my-2 uppercase">
-                      <a href="/contact">Team</a>
+                      <a href="./#giveback">GiveBack</a>
                     </li>
                     <li className="border-b text-white border-gray-400 my-2 uppercase">
-                      <a href="/contact">Opensea</a>
+                      <a href="./#team">Team</a>
                     </li>
                     <li className="border-b text-white border-gray-400 my-2 uppercase">
-                      <a href="/contact">Stake</a>
+                      <a href="https://opensea.io">Opensea</a>
+                    </li>
+                    <li className="border-b text-white border-gray-400 my-2 uppercase">
+                      <a href="/stake">Stake</a>
                     </li>
                     <li>
                       {walletAddress.length > 0 ? (
@@ -287,39 +290,45 @@ export default function Home() {
 
             <ul className="DESKTOP-MENU hidden space-x-2 lg:flex">
               <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 border-r items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                <a href="./#benefits" className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 border-r items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
                   <p className='rounded uppercase text-xs font-black
           text-white md:flex'>Benefits</p>
                 </a>
               </li>
               <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 bg-blue-200 duration-200 px-1 border-r hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                <a href="./#backstory" className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 bg-blue-200 duration-200 px-1 border-r hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
                   <p className='rounded uppercase text-xs font-black
           text-white md:flex'>Backstory</p>
                 </a>
               </li>
               <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 bg-blue-200 duration-200 px-1 border-r hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                <a href="./#spacemap" className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 bg-blue-200 duration-200 px-1 border-r hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
                   <p className='rounded uppercase text-xs font-black
           text-white md:flex'>SpaceMap </p>
                 </a>
               </li>
 
               <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 border-r items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
-                  <p className='rounded uppercase text-sm font-black
+                <a href="./#faq" className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 border-r items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                  <p className='rounded uppercase text-xs font-black
           text-white md:flex'>FAQ's</p>
                 </a>
               </li>
               <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center border-r relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
-                  <p className='rounded uppercase text-sm font-black
+                <a href="./#giveback" className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 border-r items-center relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                  <p className='rounded uppercase text-xs font-black
+          text-white md:flex'>Giveback</p>
+                </a>
+              </li>
+              <li>
+                <a href="./#team" className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center border-r relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                  <p className='rounded uppercase text-xs font-black
           text-white md:flex'>Team</p>
                 </a>
               </li>
               <li>
-                <a className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center border-r relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
-                  <p className='rounded uppercase text-sm font-black
+                <a href="/stake" className='hidden sm:flex bg-opacity-0 text-gray-100 opacity-80 items-center border-r relative h-9 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-1 hover:bg-opacity-90 flex justify-center flex-row cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
+                  <p className='rounded uppercase text-xs font-black
           text-white md:flex'>Stake</p>
                 </a>
               </li>
@@ -367,7 +376,7 @@ export default function Home() {
         height: 100vh;
         top: 0;
         left: 0;
-        background: white;
+        background: #210234;
         z-index: 10;
         display: flex;
         flex-direction: column;
