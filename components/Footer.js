@@ -26,9 +26,9 @@ export default function Footer() {
 
       </ul>
       <div className='flex flex-row justify-between'>
-        <p className='text-xs px-6'>Privacy Policy</p>
-        <p className='text-xs px-6 '>Cookie Policy</p>
-        <p className='text-xs px-6'>Terms of Use</p>
+        <a href="/privacy"><p className='text-xs px-6'>Privacy Policy</p></a>
+        <a href="/disclaimer"><p className='text-xs px-6 '>Disclaimer</p></a>
+        <a href="/terms"> <p className='text-xs px-6'>Terms and Conditions</p></a>
 
       </div>
       <p className='text-xs pt-4 pb-1'>©2022 by The Lost Bulls. </p>

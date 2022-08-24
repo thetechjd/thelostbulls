@@ -10,7 +10,7 @@ import { connectWallet, getCurrentWalletConnected, getNFTPrice, getTotalMinted, 
 const contractABI = require("./contract-abi.json");
 const stakeABI = require("./stake-abi.json");
 const contractAddress = "0xCB20c7BC687549489cF638Eb2890F49a4712ca7c";
-const stakeAddress = "0x3bA7d33076d50dA97D06bf18827Ca9933872e780"
+const stakeAddress = "0x965edC4fEb51a83043F4B96a137abC01FC2996bb"
 
 const web3 = createAlchemyWeb3(process.env.NEXT_PUBLIC_ALCHEMY_KEY);
 
@@ -37,6 +37,7 @@ export default function Home() {
   const [ethPrice, setEthPrice] = useState(0);
   const [count, setCount] = useState(0);
   const [owned, setOwned] = useState(0);
+  const [totalStaked, setTotal] = useState(0);
   const [reward, setReward] = useState(0);
   const [userAddress, setUserAddress] = useState('');
   const [isWhitelisted, setWhitelisted] = useState(false);
@@ -48,7 +49,8 @@ export default function Home() {
     setStatus(status);
     addWalletListener();
     setPrice(await getNFTPrice());
-    getEth();
+    getTotalStaked();
+
 
 
 
@@ -128,6 +130,14 @@ export default function Home() {
     setCount(numberStaked);
   }
 
+  const getTotalStaked = async () => {
+
+    const totalNfts = await stakeContract.methods.totalStaked().call();
+    setTotal(totalNfts);
+  }
+
+  /**
+  
   const getEth = () => {
     const { getEthPriceNow } = require('get-eth-price');
 
@@ -145,7 +155,7 @@ export default function Home() {
 
       )
 
-  }
+  }*/
 
 
 
@@ -155,15 +165,17 @@ export default function Home() {
     e.preventDefault();
     let stakedToken = document.getElementById('rewardId').value;
     let earned;
+    const contractBalance = await web3.eth.getBalance(stakeAddress);
+    const payout = (((contractBalance) / 10 ** 18) / 3 / totalStaked).toFixed(3);
     const timeElapsed = await stakeContract.methods.calculateTokens(stakedToken).call();
     if (timeElapsed < 30) {
       earned = 0;
     } else if (timeElapsed >= 30 && timeElapsed < 60) {
-      earned = price * .0001 * ethPrice;
+      earned = payout / 5;
     } else if (timeElapsed >= 60 && timeElapsed < 90) {
-      earned = price * .0003 * ethPrice;
+      earned = payout / 3;
     } else {
-      earned = price * .0005 * ethPrice;
+      earned = payout;
 
     }
     setReward(earned);
@@ -501,9 +513,9 @@ export default function Home() {
 
                     <ul className=''>
                       <li className='px-8 text-xs'>Please verify you have the correct tokenId before staking or transaction will revert.</li>
-                      <li className='mx-12 p-2 list-disc'>1 month: 1% ETH</li>
-                      <li className='mx-12 p-2 list-disc'>2 month term: 3% ETH</li>
-                      <li className='mx-12 p-2 list-disc'>3 month term: 5% ETH</li>
+                      <li className='mx-12 p-2 list-disc'>1 month: 20% the staked NFT’s portion</li>
+                      <li className='mx-12 p-2 list-disc'>2 months: 33% the staked NFT’s portion</li>
+                      <li className='mx-12 p-2 list-disc'>3 months: 100% the staked NFT’s portion</li>
                     </ul>
 
 
