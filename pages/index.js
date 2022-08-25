@@ -347,7 +347,7 @@ export default function Home() {
 
 
           {/* Left Hero Section - Mint Info */}
-          <div className="w-full flex flex-col items-center ">
+          <div className="w-full px-4 flex flex-col justify-center ">
 
 
             <div className="w-full mb-12 mt-8 md:mb-0">
