@@ -462,9 +462,10 @@ export default function Home() {
 
       <Backstory />
 
-      {/*
+
 
       <SpaceMap />
+      {/*
       <FAQ />
       <GiveBack />
 
