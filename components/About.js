@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function About() {
     return (
-        <div className='py-6 px-5 pt-5 pb-3 mb-5 w-full bg-pattern flex flex-col items-center justify-between'>
+        <div className='py-6 px-5 pt-5 pb-3 mb-5 w-full bg-pattern flex flex-col'>
 
             <div className='flex flex-row items-center text-center justify-between'>
                 <img src='https://static.wixstatic.com/media/849138_273ce078870c4038bf0104473524f6c6~mv2.png/v1/fill/w_306,h_306,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/male%20bull%20in%20spaceship.png' className='hidden md:flex sm:w-[300px]' />
