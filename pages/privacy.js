@@ -189,7 +189,7 @@ export default function Privacy() {
 
 
 
-                <div className="flex flex-col items-center justify-center md:flex-row md:items-center md:justify-between text-slate-900">
+                <div className="flex flex-col items-center justify-center md:flex-row md:items-center md:justify-between text-white">
 
 
 
@@ -200,9 +200,9 @@ export default function Privacy() {
 
 
 
-                        <div id='privacy' className='w-full bg-pattern mt-12 pb-12 px-8 flex flex-col justify-between'>
+                        <div id='privacy' className='bg-pattern mt-12 pb-12 px-8 flex flex-col justify-between'>
                             <h2 className='text-center text-6xl py-6 mt-5'>Privacy Policy</h2>
-                            <div className='px-16 py-8 text-white text-sm text-center bg-gray-900 rounded-md border-4 border-lime'>
+                            <div className='px-16 py-8 text-white text-xs text-center bg-gray-900 rounded-md border-4 border-lime'>
                                 <ul>
 
                                     <li className="py-2">Your privacy is important to us. This notice explains our online information practices and the choices you can make about the way your information is used at our Website <span className='px-18 md:px-16 text-xs'>(https://www.thelostbulls.io/).</span></li>
