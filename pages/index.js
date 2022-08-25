@@ -465,8 +465,9 @@ export default function Home() {
 
 
       <SpaceMap />
-      {/*
+
       <FAQ />
+      {/*
       <GiveBack />
 
       <Team />
