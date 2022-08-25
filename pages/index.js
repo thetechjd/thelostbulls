@@ -382,7 +382,7 @@ export default function Home() {
 
 
             <div className="relative rounded-md pb-2 mt-12 p-2 items-center">
-              <img src='/images/lostbulls_new.gif' alt='pass image' className='w-max-[400px] rounded-lg mb-5 flex' />
+              <img src='/images/lostbulls_new.gif' alt='pass image' className='w-max-[400px] rounded-lg mb-5 flex items-center justify-center' />
             </div>
 
 
@@ -401,6 +401,8 @@ export default function Home() {
               </div>
 
             </div>
+
+
           </div>
 
         </div>
