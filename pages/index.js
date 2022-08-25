@@ -335,7 +335,7 @@ export default function Home() {
 
 
       {/* Hero/Mint Section */}
-      <section className="flex items-center justify-center bg-pattern py-12 px-5 overflow-hidden relative z-10" id="">
+      <section className="flex items-center w-full justify-center bg-pattern py-12 px-5 overflow-hidden relative z-10" id="">
 
         {/* margin between header and hero section */}
         <div className="mb-10 flex items-center max-w-md mt-4"></div>
@@ -366,7 +366,7 @@ export default function Home() {
               <h3 className='text-center text-brightyellow font-semibold'>For every NFT minted, TLB creators will automatically burn 1,000,000 Shiba Inu tokens</h3>
 
               <button
-                className='connect titanium text-xs md:text-md mt-5 font-semibold uppercase font-base text-white px-2 md:px-3 py-2 border-2 border-teal rounded-md tracking-wide w-1/2 md:w-1/3 lg:w-1/4 hover:shadow-green-500/20'
+                className='connect titanium text-xs md:text-md mt-5 font-semibold uppercase font-base text-white px-2 md:px-3 py-2 border-2 border-teal rounded-md tracking-wide w-3/4 md:w-1/3 lg:w-1/4 hover:shadow-green-500/20'
               // onClick={mintPass}
 
               >
@@ -374,17 +374,20 @@ export default function Home() {
               </button>
             </div>
           </div>
+
+
+          <About />
+
         </div>
       </section>
-      {/** 
-            <About />
+      {/*
 
-            <div className="relative rounded-md pb-2 mt-12 p-2">
-              <img src='/images/lostbulls_new.gif' alt='pass image' className='w-max-[400px] rounded-lg mb-5 flex items-center justify-center' />
-            </div>
+      <div className="relative rounded-md pb-2 mt-12 p-2">
+        <img src='/images/lostbulls_new.gif' alt='pass image' className='w-max-[400px] rounded-lg mb-5 flex items-center justify-center' />
+      </div>
 
 
-            {/* Total supply - Price info */}
+      {/* Total supply - Price info */}
       {/*           <div className='flex flex-col bg-aqua items-center justify-center justify-between text-black rounded-md w-1/2 mx-auto p-2 border-2 border-gray-100'>
 
               <p className='text-gray-100 p-2'>{totalMinted}/5000 Minted</p>
