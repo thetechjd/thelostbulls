@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className='bg-footer h-48 pt-4 flex flex-col items-center'>
+    <footer className='bg-footer w-full h-48 pt-4 flex flex-col items-center'>
       <p>Whitepaper</p>
       <ul className='flex space-x-2'>
         <li className='flex'>
@@ -26,9 +26,9 @@ export default function Footer() {
 
       </ul>
       <div className='flex flex-row justify-between'>
-        <a href="/privacy"><p className='text-xs px-6'>Privacy Policy</p></a>
-        <a href="/disclaimer"><p className='text-xs px-6 '>Disclaimer</p></a>
-        <a href="/terms"> <p className='text-xs px-6'>Terms and Conditions</p></a>
+        <a href="/privacy"><p className='text-xs px-1 md:px-6'>Privacy Policy</p></a>
+        <a href="/disclaimer"><p className='text-xs px-1 md:px-6 '>Disclaimer</p></a>
+        <a href="/terms"> <p className='text-xs px-1 md:px-6'>Terms and Conditions</p></a>
 
       </div>
       <p className='text-xs pt-4 pb-1'>©2022 by The Lost Bulls. </p>
