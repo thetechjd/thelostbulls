@@ -192,7 +192,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>The Lost Bulls</title>
+        <title>The Lost Bulls - NFT Collection</title>
         <meta name="description" content="Lost Bulls NFT Dapp" />
         <link rel="icon" href="/favicon.png" />
       </Head>
