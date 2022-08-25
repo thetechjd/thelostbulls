@@ -420,123 +420,123 @@ export default function Home() {
           <div className="w-full flex flex-col items-center ">
 
 
-            <div className="w-full mb-12 mt-8 md:mb-0">
 
 
 
-              <div className="w-full mt-12 px-4 items-center justify-center">
 
-                <div className="max-w-[600px] px-6 py-2 rounded-lg bg-gray-900 items-center justify-center">
-                  {walletAddress.length > 0 ? (
+            <div className="w-full mt-12 px-4 items-center justify-center">
 
-
-
-                    <div className='flex flex-row items-right justify-end'>
-
-
-                      <button
-                        className='flex flex-col items-right text-xs md:text-sm bg-blue-400 rounded font-semibold uppercase font-base text-white px-2 py-2 mx-2 tracking-wide hover:shadow-green-500/20'
-                        // onClick={mintPass}
-                        onClick={updateBalance}
-
-                      >
-                        Refresh
-                      </button>
-
-                    </div>
-                  ) : (
-                    <></>
-                  )
-                  }
-
-                  <p className="flex flex-row w-full text-white text-xs py-2 my-2">No. Bulls owned: <span className='w-4/5 text-lime text-center text-white text-xs rounded bg-black h-9 px-2 py-2 my-2 '>{owned}</span></p>
-                  <p className="flex flex-row w-full text-white text-xs py-2 my-2">No. Bulls staked: <span className='w-4/5 text-lime text-center text-white text-xs rounded bg-black h-9 px-2 py-2 my-2'>{count}</span></p>
-                  <p className="flex flex-row w-full text-white text-xs py-2 my-2">Calculated Reward: <span className='w-4/5 text-lime text-white text-xs text-center rounded bg-black h-9 px-2 py-2 my-2'>{reward}</span></p>
-
-                  {walletAddress.length > 0 ? (
-                    <>
-                      <div className='flex flex-row'>
-
-                        <div className='flex flex-row items-center justify-center'>
-                          <form className="flex flex-row text-center" onSubmit={onStakePressed}>
-
-                            <input className="flex flex-col text-center text-xs bg-black text-lime w-1/3" id='stakeId' type="number" name="stakeId" placeholder="id" />
-
-                            <button
-                              className='flex flex-col justify-center text-xs md:text-lg bg-red-500 rounded font-semibold uppercase font-base text-white px-2 py-2 mx-2 tracking-wide hover:shadow-green-500/20'
-                            // onClick={mintPass}
-
-                            >
-                              Stake
-                            </button>
-                          </form>
-                        </div>
-                        <div className='flex items-center justify-center'>
-                          <form className="flex flex-row text-center" onSubmit={onUnstakePressed}>
-                            <input className="flex flex-col w-1/3 text-xs text-lime text-center px-2 bg-black" id='unstakeId' type="number" name="unstakeId" placeholder="id" />
-                            <button
-                              className='text-xs md:text-lg bg-gray-300 rounded font-semibold uppercase font-base text-white px-1 py-2 mx-2 tracking-wide hover:shadow-green-500/20'
-                            // onClick={mintPass}
-
-                            >
-                              Unstake
-                            </button>
-                          </form>
-                        </div>
-                      </div>
+              <div className="max-w-[600px] px-6 py-2 rounded-lg bg-gray-900 items-center justify-center">
+                {walletAddress.length > 0 ? (
 
 
 
-                      <div className='flex flex-row h-9 mt-2'>
-                        <form className="flex flex-row text-center" onSubmit={calculateReward}>
-                          <input className="flex flex-col w-1/5 text-xs text-lime text-center px-2 bg-black" id='rewardId' type="number" name="rewardId" placeholder="id" />
+                  <div className='flex flex-row items-right justify-end'>
+
+
+                    <button
+                      className='flex flex-col items-right text-xs md:text-sm bg-blue-400 rounded font-semibold uppercase font-base text-white px-2 py-2 mx-2 tracking-wide hover:shadow-green-500/20'
+                      // onClick={mintPass}
+                      onClick={updateBalance}
+
+                    >
+                      Refresh
+                    </button>
+
+                  </div>
+                ) : (
+                  <></>
+                )
+                }
+
+                <p className="flex flex-row w-full text-white text-xs py-2 my-2">No. Bulls owned: <span className='w-4/5 text-lime text-center text-white text-xs rounded bg-black h-9 px-2 py-2 my-2 '>{owned}</span></p>
+                <p className="flex flex-row w-full text-white text-xs py-2 my-2">No. Bulls staked: <span className='w-4/5 text-lime text-center text-white text-xs rounded bg-black h-9 px-2 py-2 my-2'>{count}</span></p>
+                <p className="flex flex-row w-full text-white text-xs py-2 my-2">Calculated Reward: <span className='w-4/5 text-lime text-white text-xs text-center rounded bg-black h-9 px-2 py-2 my-2'>{reward}</span></p>
+
+                {walletAddress.length > 0 ? (
+                  <>
+                    <div className='flex flex-row'>
+
+                      <div className='flex flex-row items-center justify-center'>
+                        <form className="flex flex-row text-center" onSubmit={onStakePressed}>
+
+                          <input className="flex flex-col text-center text-xs bg-black text-lime w-1/3" id='stakeId' type="number" name="stakeId" placeholder="id" />
+
                           <button
-                            className='text-xs w-4/5 bg-purple-500 rounded font-semibold uppercase font-base text-white px-1 py-2 mx-2 tracking-wide hover:shadow-green-500/20'
+                            className='flex flex-col justify-center text-xs md:text-lg bg-red-500 rounded font-semibold uppercase font-base text-white px-2 py-2 mx-2 tracking-wide hover:shadow-green-500/20'
                           // onClick={mintPass}
 
                           >
-                            Calculate Reward
+                            Stake
                           </button>
                         </form>
-
                       </div>
+                      <div className='flex items-center justify-center'>
+                        <form className="flex flex-row text-center" onSubmit={onUnstakePressed}>
+                          <input className="flex flex-col w-1/3 text-xs text-lime text-center px-2 bg-black" id='unstakeId' type="number" name="unstakeId" placeholder="id" />
+                          <button
+                            className='text-xs md:text-lg bg-gray-300 rounded font-semibold uppercase font-base text-white px-1 py-2 mx-2 tracking-wide hover:shadow-green-500/20'
+                          // onClick={mintPass}
 
-                    </>
-                  ) : (
-                    <>
-                      <p className='text-center flex flex-col font-bold text-white text-base md:text-2xl text-body-color leading-relaxed m-3 md:m-8 break-words ...'>
-                        Connect Your Wallet to Stake
-                      </p></>
-                  )}
-
-                  <div className='justify-center items-center mt-5 text-white text-sm bg-gray-900 rounded-md border-4 border-lime'>
-
-                    <ul className=''>
-                      <li className='px-8 text-xs'>Please verify you have the correct tokenId before staking or transaction will revert.</li>
-                      <li className='mx-12 p-2 list-disc'>1 month: 20% the staked NFT’s portion</li>
-                      <li className='mx-12 p-2 list-disc'>2 months: 33% the staked NFT’s portion</li>
-                      <li className='mx-12 p-2 list-disc'>3 months: 100% the staked NFT’s portion</li>
-                    </ul>
+                          >
+                            Unstake
+                          </button>
+                        </form>
+                      </div>
+                    </div>
 
 
-                  </div>
+
+                    <div className='flex flex-row h-9 mt-2'>
+                      <form className="flex flex-row text-center" onSubmit={calculateReward}>
+                        <input className="flex flex-col w-1/5 text-xs text-lime text-center px-2 bg-black" id='rewardId' type="number" name="rewardId" placeholder="id" />
+                        <button
+                          className='text-xs w-4/5 bg-purple-500 rounded font-semibold uppercase font-base text-white px-1 py-2 mx-2 tracking-wide hover:shadow-green-500/20'
+                        // onClick={mintPass}
+
+                        >
+                          Calculate Reward
+                        </button>
+                      </form>
+
+                    </div>
+
+                  </>
+                ) : (
+                  <>
+                    <p className='text-center flex flex-col font-bold text-white text-base md:text-2xl text-body-color leading-relaxed m-3 md:m-8 break-words ...'>
+                      Connect Your Wallet to Stake
+                    </p></>
+                )}
+
+                <div className='justify-center items-center mt-5 text-white text-sm bg-gray-900 rounded-md border-4 border-lime'>
+
+                  <ul className=''>
+                    <li className='px-8 text-xs'>Please verify you have the correct tokenId before staking or transaction will revert.</li>
+                    <li className='mx-12 p-2 list-disc'>1 month: 20% the staked NFT’s portion</li>
+                    <li className='mx-12 p-2 list-disc'>2 months: 33% the staked NFT’s portion</li>
+                    <li className='mx-12 p-2 list-disc'>3 months: 100% the staked NFT’s portion</li>
+                  </ul>
+
+
                 </div>
-
-
               </div>
 
 
-
-
-
-
-
-
-
-
-
-
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -564,7 +564,7 @@ export default function Home() {
 
         {/* Right Hero Section - Video/Image Bird PASS */}
 
-        <img className="fixed bottom-0 left-0 w-1/5 z-20" src="/images/mainbull.png" />
+        {/*<img className="fixed bottom-0 left-0 w-1/5 z-20" src="/images/mainbull.png" />*/}
         {/* <img className="fixed top-5 right-5 w-1/8 z-20" src="/images/spaceship.png" />*/}
       </section>
 
