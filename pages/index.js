@@ -470,10 +470,9 @@ export default function Home() {
 
       <GiveBack />
 
-      {/*
+
 
       <Team />
-  */}
 
       <Footer />
 
