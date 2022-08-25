@@ -372,7 +372,10 @@ export default function Home() {
             >
               Join Pre-Sale Whitelist
             </button>
-
+          </div>
+        </div>
+      </section>
+      {/** 
             <About />
 
             <div className="relative rounded-md pb-2 mt-12 p-2">
@@ -381,7 +384,7 @@ export default function Home() {
 
 
             {/* Total supply - Price info */}
-            <div className='flex flex-col bg-aqua items-center justify-center justify-between text-black rounded-md w-1/2 mx-auto p-2 border-2 border-gray-100'>
+      {/*           <div className='flex flex-col bg-aqua items-center justify-center justify-between text-black rounded-md w-1/2 mx-auto p-2 border-2 border-gray-100'>
 
               <p className='text-gray-100 p-2'>{totalMinted}/5000 Minted</p>
 
@@ -397,7 +400,7 @@ export default function Home() {
             </div>
 
             {/* Increment & Decrement buttons */}
-            {walletAddress.length > 0 ? (
+      {/*          {walletAddress.length > 0 ? (
               <div className='flex flex-col'>
                 <div className='flex items-center justify-between sm:px-3 m-4'>
                   <button className='button w-10 h-10 flex items-center justify-center text-teal hover:shadow-lg bg-background font-bold rounded-md border border-opacity-80 border-teal'
@@ -408,7 +411,7 @@ export default function Home() {
                   <p className="flex items-center justify-center flex-1 grow text-center font-bold text-fuschia text-2xl md:text-3xl">
                     {count}
                     {/* 1 */}
-                  </p>
+      {/*               </p>
                   <button className="button w-10 h-10 flex items-center justify-center text-teal text-2xl hover:shadow-lg bg-background font-bold rounded-md border border-opacity-80 border-teal"
                     onClick={incrementCount}
                   >
@@ -441,8 +444,8 @@ export default function Home() {
         </div>
 
         {/* Total:  {nftPrice} + Gas */}
-        {/* Mint Status */}
-        {/* {status && (
+      {/* Mint Status */}
+      {/* {status && (
       <div className="flex items-center justify-center">
         {status}
       </div>
@@ -450,11 +453,11 @@ export default function Home() {
 
 
 
-        {/* Right Hero Section - Video/Image Bird PASS */}
-
+      {/* Right Hero Section - Video/Image Bird PASS */}
+      {/*
         <img className="fixed bottom-0 left-0 w-1/5 z-20" src="/images/mainbull.png" />
         {/*<img className="fixed top-5 right-5 w-1/8 z-20" src="/images/spaceship.png" />*/}
-      </section>
+      {/*}     </section>
 
       <Benefits />
       <Backstory />
@@ -466,6 +469,9 @@ export default function Home() {
       <Team />
 
       <Footer />
+      
+
+      
 
 
 
