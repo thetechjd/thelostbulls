@@ -456,7 +456,7 @@ export default function Home() {
         {/* Right Hero Section - Video/Image Bird PASS */}
 
         <img className="fixed bottom-0 left-0 w-1/5 z-20" src="/images/mainbull.png" />
-        <img className="fixed top-5 right-5 w-1/8 z-20" src="/images/spaceship.png" />
+        {/*<img className="fixed top-5 right-5 w-1/8 z-20" src="/images/spaceship.png" />*/}
       </section>
 
       <Benefits />
