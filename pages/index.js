@@ -347,7 +347,7 @@ export default function Home() {
 
 
           {/* Left Hero Section - Mint Info */}
-          <div className="w-full px-4 flex flex-col justify-center ">
+          <div className="w-full px-4 flex flex-col justify-center items-center ">
 
 
             <div className="w-full mb-12 mt-8 md:mb-0">
@@ -381,7 +381,7 @@ export default function Home() {
 
 
 
-            <div className="relative rounded-md pb-2 mt-12 p-2 items-center">
+            <div className="relative max-w-[570px] rounded-md pb-2 mt-12 p-2 items-center justify-center">
               <img src='/images/lostbulls_new.gif' alt='pass image' className='w-max-[400px] rounded-lg mb-5 flex items-center justify-center' />
             </div>
 
