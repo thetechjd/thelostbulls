@@ -15,7 +15,7 @@ export default function Benefits() {
                     </li>
                     <li className='px-8 py-4 list-disc' >(Example: the royalty balance is $100,000. $25,000 will be placed in the community fund to be distributed as staking rewards. There are 1,000 TLB NFTs being staked. A TLB NFT staked for 1 month will be rewarded $5 [($25,000/1000) x .2)])</li>
                     <ul>
-                        <li className='list-disc'>The creators of TLB are not even close to being finished! We are currently planning our next project, which TLB holders will have first priority to once dropped.</li>
+                        <li className='list-disc py-4'>The creators of TLB are not even close to being finished! We are currently planning our next project, which TLB holders will have first priority to once dropped.</li>
                     </ul>
 
 

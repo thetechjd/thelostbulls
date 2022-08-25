@@ -7,7 +7,7 @@ export default function Team() {
             <div className='px-4 py-8 text-white text-sm bg-gray-900 flex flex-col items-center rounded-md border-4 border-lime'>
 
 
-                <div className='max-w-[2/3] flex flex-col justify-between'>
+                <div className='max-w-[2/3] px-2 flex flex-col justify-between'>
                     <p className='text-xs text-center pt-3 my-6'>Meet the team who works tirelessly to ensure the long-term success of TLB</p>
                     <div className='flex flex-row justify-center py-6'>
                         <img src='./images/starceo.webp' className='w-1/2 mx-6' />
@@ -18,8 +18,8 @@ export default function Team() {
                         <img src='./images/kevanj.webp' className='w-1/2 mx-6' />
                     </div>
                     <div className='flex flex-row justify-center py-6'>
-                        <img src='./images/marla.webp' className='w-1/2 mx-6' />
-                        <div className='w-1/2 mx-6 '></div>
+                        <img src='./images/marla.webp' className='w-1/2 -ml-6 md:mx-6' />
+                        <div className='w-1/2 mx-6'></div>
                     </div>
 
                 </div>

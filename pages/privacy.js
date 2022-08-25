@@ -184,12 +184,12 @@ export default function Privacy() {
 
 
 
-            <div id='privacy' className='bg-pattern mt-12 pt-5 pb-12 px-8 flex flex-col justify-between'>
+            <div id='privacy' className='bg-pattern mt-12 mr-18 md:mr-0 pt-5 pb-12 px-8 flex flex-col justify-between'>
                 <h2 className='text-center text-6xl py-6 mt-5'>Privacy Policy</h2>
                 <div className='px-16 py-8 text-white text-sm text-center bg-gray-900 rounded-md border-4 border-lime'>
                     <ul>
-                        <li className="py-4">Privacy Policy</li>
-                        <li className="py-2">Your privacy is important to us. This notice explains our online information practices and the choices you can make about the way your information is used at our Website (https://www.thelostbulls.io/).</li>
+
+                        <li className="py-2">Your privacy is important to us. This notice explains our online information practices and the choices you can make about the way your information is used at our Website <span className='px-18 md:px-16 text-xs'>(https://www.thelostbulls.io/).</span></li>
                         <li className="py-4">Collection of Personal Information</li>
                         <li className="py-2">The Lost Bulls may collect certain personally identifiable information (“Personal Information”) about you when you visit our Website. Examples of personal information we may collect include your name, address, telephone number, fax number, e-mail address. We also automatically collect certain non-personally identifiable information when you visit our Website, including, but not limited to, the type of browser you are using, the type of operating system you are using, and the domain name of your Internet service provider.</li>
                         <li className="py-4">Use of Personal Information</li>
