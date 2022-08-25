@@ -403,13 +403,10 @@ export default function Home() {
             </div>
 
 
-          </div>
 
-        </div>
-      </section>
 
-      {/* Increment & Decrement buttons */}
-      {/*          {walletAddress.length > 0 ? (
+            {/* Increment & Decrement buttons */}
+            {walletAddress.length > 0 ? (
               <div className='flex flex-col'>
                 <div className='flex items-center justify-between sm:px-3 m-4'>
                   <button className='button w-10 h-10 flex items-center justify-center text-teal hover:shadow-lg bg-background font-bold rounded-md border border-opacity-80 border-teal'
@@ -420,7 +417,7 @@ export default function Home() {
                   <p className="flex items-center justify-center flex-1 grow text-center font-bold text-fuschia text-2xl md:text-3xl">
                     {count}
                     {/* 1 */}
-      {/*               </p>
+                  </p>
                   <button className="button w-10 h-10 flex items-center justify-center text-teal text-2xl hover:shadow-lg bg-background font-bold rounded-md border border-opacity-80 border-teal"
                     onClick={incrementCount}
                   >
@@ -452,7 +449,12 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Total:  {nftPrice} + Gas */}
+
+
+      </section>
+
+
+      {/* Total:  {nftPrice} + Gas */}
       {/* Mint Status */}
       {/* {status && (
       <div className="flex items-center justify-center">
