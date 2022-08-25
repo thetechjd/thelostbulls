@@ -190,7 +190,7 @@ export default function Privacy() {
                     <div className='w-3/4 px-2 md:px-16 py-8 text-white text-xs text-center bg-gray-900 rounded-md border-4 border-lime'>
                         <ul>
 
-                            <li className="py-2">Your privacy is important to us. This notice explains our online information practices and the choices you can make about the way your information is used at our Website <span className='px-18 md:px-16 text-xs'>(https://www.thelostbulls.io/).</span></li>
+                            <li className="py-2">Your privacy is important to us. This notice explains our online information practices and the choices you can make about the way your information is used at our <a href='https://www.thelostbulls.io/'>Website.</a></li>
                             <li className="py-4">Collection of Personal Information</li>
                             <li className="py-2">The Lost Bulls may collect certain personally identifiable information (“Personal Information”) about you when you visit our Website. Examples of personal information we may collect include your name, address, telephone number, fax number, e-mail address. We also automatically collect certain non-personally identifiable information when you visit our Website, including, but not limited to, the type of browser you are using, the type of operating system you are using, and the domain name of your Internet service provider.</li>
                             <li className="py-4">Use of Personal Information</li>
@@ -226,7 +226,7 @@ export default function Privacy() {
                             </li>
                             <li className="py-2">The right to refuse to be subjected to automated decision making, including profiling: You have the right not to be subject to a decision and insist on human intervention if the decision is based on automated processing and produces a legal effect or a similarly significant effect on you.</li>
                             <li className="py-4">Contacting Us</li>
-                            <li className="py-2">If you have any questions or concerns about our privacy policy, please open a ticket in the TLB Discord at https://discord.gg/HkpkR7U4
+                            <li className="py-2">If you have any questions or concerns about our privacy policy, please open a ticket in the <a href='https://discord.gg/HkpkR7U4'>TLB Discord.</a>
                             </li>
 
                         </ul>
