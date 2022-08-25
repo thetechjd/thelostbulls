@@ -378,32 +378,34 @@ export default function Home() {
 
           <About />
 
-        </div>
-      </section>
-      {/*
-
-      <div className="relative rounded-md pb-2 mt-12 p-2">
-        <img src='/images/lostbulls_new.gif' alt='pass image' className='w-max-[400px] rounded-lg mb-5 flex items-center justify-center' />
-      </div>
 
 
-      {/* Total supply - Price info */}
-      {/*           <div className='flex flex-col bg-aqua items-center justify-center justify-between text-black rounded-md w-1/2 mx-auto p-2 border-2 border-gray-100'>
 
-              <p className='text-gray-100 p-2'>{totalMinted}/5000 Minted</p>
+          <div className="relative rounded-md pb-2 mt-12 p-2 items-center">
+            <img src='/images/lostbulls_new.gif' alt='pass image' className='w-max-[400px] rounded-lg mb-5 flex' />
+          </div>
 
+
+          {/* Total supply - Price info */}
+          <div className='flex flex-col bg-aqua items-center justify-center justify-between text-black rounded-md w-1/2 mx-auto p-2 border-2 border-gray-100'>
+
+            <p className='text-gray-100 p-2'>{totalMinted}/5000 Minted</p>
 
 
 
 
-              <div className='mb-4 w-full md:w-3/4 flex flex-row items-center justify-between'>
-                <p className='font-bold text-xs md:text-sm text-gray-100'>Price Per Mint:</p>
-                <p className='font-bold text-xs md: text-sm text-gray-100'>{price} ETH</p>
-              </div>
 
+            <div className='mb-4 w-full md:w-3/4 flex flex-row items-center justify-between'>
+              <p className='font-bold text-xs md:text-sm text-gray-100'>Price Per Mint:</p>
+              <p className='font-bold text-xs md: text-sm text-gray-100'>{price} ETH</p>
             </div>
 
-            {/* Increment & Decrement buttons */}
+          </div>
+
+        </div>
+      </section>
+
+      {/* Increment & Decrement buttons */}
       {/*          {walletAddress.length > 0 ? (
               <div className='flex flex-col'>
                 <div className='flex items-center justify-between sm:px-3 m-4'>
