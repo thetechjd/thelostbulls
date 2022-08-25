@@ -361,83 +361,82 @@ export default function Home() {
 
 
             </div>
-            <div className="w-full px-4 flex flex-col justify-center">
+            <div className="w-full px-4 flex flex-col justify-center"></div>
 
-              <h3 className='text-center text-brightyellow font-semibold'>For every NFT minted, TLB creators will automatically burn 1,000,000 Shiba Inu tokens</h3>
+            <h3 className='text-center text-brightyellow font-semibold'>For every NFT minted, TLB creators will automatically burn 1,000,000 Shiba Inu tokens</h3>
 
-              <button
-                className='connect titanium text-xs md:text-md mt-5 font-semibold uppercase font-base text-white px-1 md:px-3 py-2 border-2 border-teal rounded-md tracking-wide w-1/2 md:w-1/3 lg:w-1/4 hover:shadow-green-500/20'
-              // onClick={mintPass}
+            <button
+              className='connect titanium text-xs md:text-md mt-5 font-semibold uppercase font-base text-white px-1 md:px-3 py-2 border-2 border-teal rounded-md tracking-wide w-1/2 md:w-1/3 lg:w-1/4 hover:shadow-green-500/20'
+            // onClick={mintPass}
 
-              >
-                Join Pre-Sale Whitelist
-              </button>
+            >
+              Join Pre-Sale Whitelist
+            </button>
 
-              <About />
+            <About />
 
-              <div className="relative rounded-md pb-2 mt-12 p-2">
-                <img src='/images/lostbulls_new.gif' alt='pass image' className='w-max-[400px] rounded-lg mb-5 flex items-center justify-center' />
+            <div className="relative rounded-md pb-2 mt-12 p-2">
+              <img src='/images/lostbulls_new.gif' alt='pass image' className='w-max-[400px] rounded-lg mb-5 flex items-center justify-center' />
+            </div>
+
+
+            {/* Total supply - Price info */}
+            <div className='flex flex-col bg-aqua items-center justify-center justify-between text-black rounded-md w-1/2 mx-auto p-2 border-2 border-gray-100'>
+
+              <p className='text-gray-100 p-2'>{totalMinted}/5000 Minted</p>
+
+
+
+
+
+              <div className='mb-4 w-full md:w-3/4 flex flex-row items-center justify-between'>
+                <p className='font-bold text-xs md:text-sm text-gray-100'>Price Per Mint:</p>
+                <p className='font-bold text-xs md: text-sm text-gray-100'>{price} ETH</p>
               </div>
-
-
-              {/* Total supply - Price info */}
-              <div className='flex flex-col bg-aqua items-center justify-center justify-between text-black rounded-md w-1/2 mx-auto p-2 border-2 border-gray-100'>
-
-                <p className='text-gray-100 p-2'>{totalMinted}/5000 Minted</p>
-
-
-
-
-
-                <div className='mb-4 w-full md:w-3/4 flex flex-row items-center justify-between'>
-                  <p className='font-bold text-xs md:text-sm text-gray-100'>Price Per Mint:</p>
-                  <p className='font-bold text-xs md: text-sm text-gray-100'>{price} ETH</p>
-                </div>
-
-              </div>
-
-              {/* Increment & Decrement buttons */}
-              {walletAddress.length > 0 ? (
-                <div className='flex flex-col'>
-                  <div className='flex items-center justify-between sm:px-3 m-4'>
-                    <button className='button w-10 h-10 flex items-center justify-center text-teal hover:shadow-lg bg-background font-bold rounded-md border border-opacity-80 border-teal'
-                      onClick={decrementCount}
-                    >
-                      ــ
-                    </button>
-                    <p className="flex items-center justify-center flex-1 grow text-center font-bold text-fuschia text-2xl md:text-3xl">
-                      {count}
-                      {/* 1 */}
-                    </p>
-                    <button className="button w-10 h-10 flex items-center justify-center text-teal text-2xl hover:shadow-lg bg-background font-bold rounded-md border border-opacity-80 border-teal"
-                      onClick={incrementCount}
-                    >
-                      +
-                    </button>
-                  </div>
-                  <div className='flex items-center justify-center p-2 text-black'>
-                    Total: {Number.parseFloat((price * count).toFixed(3))} ETH +
-                    <span className='text-gray-500'> Gas</span>
-                  </div>
-                  <div className='flex items-center justify-center'>
-                    <button
-                      className='text-lg titanium font-semibold uppercase font-base text-white px-12 py-2 tracking-wide hover:shadow-green-500/20'
-                      // onClick={mintPass}
-                      onClick={onMintPressed}
-                    >
-                      Mint Now
-                    </button>
-                  </div>
-                </div>
-
-              ) : (
-                <>
-                  <p className='text-center flex flex-col font-bold text-white text-base md:text-2xl text-body-color leading-relaxed m-3 md:m-8 break-words ...'>
-                    Connect Your Wallet to Mint
-                  </p></>
-              )}
 
             </div>
+
+            {/* Increment & Decrement buttons */}
+            {walletAddress.length > 0 ? (
+              <div className='flex flex-col'>
+                <div className='flex items-center justify-between sm:px-3 m-4'>
+                  <button className='button w-10 h-10 flex items-center justify-center text-teal hover:shadow-lg bg-background font-bold rounded-md border border-opacity-80 border-teal'
+                    onClick={decrementCount}
+                  >
+                    ــ
+                  </button>
+                  <p className="flex items-center justify-center flex-1 grow text-center font-bold text-fuschia text-2xl md:text-3xl">
+                    {count}
+                    {/* 1 */}
+                  </p>
+                  <button className="button w-10 h-10 flex items-center justify-center text-teal text-2xl hover:shadow-lg bg-background font-bold rounded-md border border-opacity-80 border-teal"
+                    onClick={incrementCount}
+                  >
+                    +
+                  </button>
+                </div>
+                <div className='flex items-center justify-center p-2 text-black'>
+                  Total: {Number.parseFloat((price * count).toFixed(3))} ETH +
+                  <span className='text-gray-500'> Gas</span>
+                </div>
+                <div className='flex items-center justify-center'>
+                  <button
+                    className='text-lg titanium font-semibold uppercase font-base text-white px-12 py-2 tracking-wide hover:shadow-green-500/20'
+                    // onClick={mintPass}
+                    onClick={onMintPressed}
+                  >
+                    Mint Now
+                  </button>
+                </div>
+              </div>
+
+            ) : (
+              <>
+                <p className='text-center flex flex-col font-bold text-white text-base md:text-2xl text-body-color leading-relaxed m-3 md:m-8 break-words ...'>
+                  Connect Your Wallet to Mint
+                </p></>
+            )}
+
           </div>
         </div>
 
