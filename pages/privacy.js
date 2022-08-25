@@ -185,71 +185,70 @@ export default function Privacy() {
 
 
             {/* margin between header and hero section */}
-            <div className="mb-10 flex items-center max-w-md mt-4"></div>
-
-
-
-            <div className="flex flex-col items-center justify-center md:flex-row md:items-center md:justify-between text-white">
-
-
-
-                {/* Left Hero Section - Mint Info */}
 
 
 
 
 
 
-                <div id='privacy' className='bg-pattern mt-12 pb-12 px-8 flex flex-col justify-between'>
-                    <h2 className='text-center text-6xl py-6 mt-5'>Privacy Policy</h2>
-                    <div className='px-16 py-8 text-white text-xs text-center bg-gray-900 rounded-md border-4 border-lime'>
-                        <ul>
 
-                            <li className="py-2">Your privacy is important to us. This notice explains our online information practices and the choices you can make about the way your information is used at our Website <span className='px-18 md:px-16 text-xs'>(https://www.thelostbulls.io/).</span></li>
-                            <li className="py-4">Collection of Personal Information</li>
-                            <li className="py-2">The Lost Bulls may collect certain personally identifiable information (“Personal Information”) about you when you visit our Website. Examples of personal information we may collect include your name, address, telephone number, fax number, e-mail address. We also automatically collect certain non-personally identifiable information when you visit our Website, including, but not limited to, the type of browser you are using, the type of operating system you are using, and the domain name of your Internet service provider.</li>
-                            <li className="py-4">Use of Personal Information</li>
-                            <li className="py-2">The Lost Bulls will only use your personal information where we have a lawful basis to do so. We will process your data for the following lawful purposes: with your consent; where it is necessary for us to perform a contract we have with you, such as sending out purchased items / merchandise, or because you have asked us to take specific steps before entering into a contract (for example, responding to your inquiry ); because the processing is necessary for us to comply with the law; or where the processing is necessary for our legitimate interests or the legitimate interests of a third party.</li>
-                            <li className="py-2">We typically will not contact you about other matters, unless you specifically request it, nor will we share, rent, or sell your personal information outside The Lost Bulls, except where we are required to share your information with any third parties who provide services on our behalf.</li>
-                            <li className="py-2">It is possible, though unlikely, that we might be forced to disclose personal information in response to a legal demand or when we believe in good faith that the law requires it, for example, in response to a law enforcement agency's request.</li>
-                            <li className="py-2">We use non-personally identifiable information to analyze site usage (such as aggregated information on the pages visited by our users), which allows us to improve the design and content of our site.</li>
-                            <li className="py-2">We cannot guarantee the privacy of personal information you transmit over the web or that may be collectible in transit by others, including contractors who provide services to The Lost Bulls.
-                            </li>
-                            <li className="py-2">We are committed to complying with all applicable privacy laws and regulations. To the extent we receive personal information from a resident of the European Union, we will comply with the requirements of the General Data Protection Regulation (GDPR). To the extent we receive personal information from a resident of California, we will comply with the requirements of the California Consumer Privacy Act (CCPA) (California Civil Code Section 1798.100 et seq).</li>
-                            <li className="py-4">Third Party Sites</li>
-                            <li className="py-2">Our Website may contain links to other websites such as a minting page. The data privacy practices of those third-party websites might differ from The Lost Bulls’. You should consult the other websites' privacy notices for information on their privacy practices as The Lost Bulls has no control over information that is submitted to, or collected by, these third parties.</li>
-                            <li className="py-2">The Lost Bulls may post information on our Website about programs and events that are sponsored by or co-sponsored by other organizations. The Lost Bulls will have no control over the third-party sponsors' use of this information.</li>
-                            <li className="py-4">Cookies</li>
-                            <li className="py-2">When you visit our Website, we and third parties with whom we have contracted to provide services to The Lost Bulls may collect "Site Usage Data," which is non-personally identifiable information relating to your use of our Website such as what Website pages you visit. The Website Usage Data could include your MAC address, operating system version, type of computer and browser type. This data could also include demographic data, such as a Website visitor's geographic location. To enhance your experience on our Website, we and our service providers may use "cookies" on our Website.</li>
-                            <li className="py-2">A "cookie" is a piece of information that a web server may place on your computer when you visit a website. Cookies are commonly used by websites to improve the user experience and have not been known to transmit computer viruses or otherwise harm your computer. Many cookies last only through a single website session or visit. Others may have an expiration date or may remain on your computer until you delete them.</li>
-                            <li className="py-2">We may use cookies for a number of purposes - for example, to maintain continuity during a user session, to gather Website Usage Data for research and other purposes, to store your preferences for certain kinds of information and marketing offers, or to store certain information so that you do not have to provide this information every time you return to one of our Website. Our cookies will track only your activity relating to your online activity on our Website, and will not track your other Internet activity. Our cookies do not gather personal information.</li>
-                            <li className="py-2">You can decide if and how your computer will accept a cookie by configuring your preferences or options in your browser. However, if you choose to reject cookies, you may not be able to use certain online products and services offered on the Website or certain features of our Website.</li>
-                            <li className="py-2">The Lost Bulls may occasionally use other companies to set cookies on our Website and gather Website Usage Data for The Lost Bulls. In some cases, The Lost Bulls may also use another company to operate web servers for our Website. The Lost Bulls uses the cookie information gathered by these companies in the same manner as stated in this Privacy Policy.</li>
-                            <li className="py-4">IP Addresses</li>
-                            <li className="py-2">When you visit and interact with our Website, The Lost Bulls and third parties with whom we have contracted to provide services for us may collect Internet Protocol (IP) addresses (each an "IP Address"). An IP Address is a number that is automatically assigned to the computer that you are using by your Internet Service Provider (ISP). Your IP Address is identified and logged automatically whenever you visit the Website, along with the time(s) of your visit(s), your geographic location and the page(s) that you visited. The Lost Bulls uses this information to determine the locations of our Website visitors to better understand where our visitors reside. The Lost Bulls also may use this information to enhance our Website or for other lawful purposes.</li>
-                            <li className="py-2">Certain pages on our Website contain "web beacons" (also known as Internet tags, pixel tags and clear GIFs). These web beacons allow third parties to obtain information such as the IP Address of the computer that downloaded the page on which the beacon appears, the URL of the page on which the beacon appears, the time the page containing the beacon was viewed, the type of browser used to view the page, and the information in cookies set by the third party.
-                            </li>
-                            <li className="py-4">Legal Rights of European Residents</li>
-                            <li className="py-2">Some data protection laws, including GDPR, provide you with certain rights in connection with personal information you have shared with us. If you are resident in the European Economic Area, you may have the following rights:</li>
-                            <li className="py-2">The right to be informed: You are entitled to be informed of the use of your personal information. This Privacy Policy provides such information to you.
-                            </li>
-                            <li className="py-2">The right of access: You have the right to request a copy of your personal information which we hold about you.</li>
-                            <li className="py-2">The right of correction: You have the right to request correction or changes of your personal information if it is found to be inaccurate or out of date.</li>
-                            <li className="py-2">The right to be forgotten: You have the right to request us, at any time, to delete your personal information from our servers and to erase your personal information when it is no longer necessary for us to retain such data. Note, however, that deletion of your personal information will likely impact your ability to use our services.</li>
-                            <li className="py-2">The right to object (opt-out): You have the right to opt-out of certain uses of your personal information, such as direct marketing, at any time.</li>
-                            <li className="py-2">The right to data portability: You have the right to a “portable” copy of your personal information that you have submitted to us. Generally, this means your right to request that we move, copy or transmit your personal information stored on our servers / IT environment to another service provider’s servers / IT environment.
-                            </li>
-                            <li className="py-2">The right to refuse to be subjected to automated decision making, including profiling: You have the right not to be subject to a decision and insist on human intervention if the decision is based on automated processing and produces a legal effect or a similarly significant effect on you.</li>
-                            <li className="py-4">Contacting Us</li>
-                            <li className="py-2">If you have any questions or concerns about our privacy policy, please open a ticket in the TLB Discord at https://discord.gg/HkpkR7U4
-                            </li>
-
-                        </ul>
-                    </div>
+            {/* Left Hero Section - Mint Info */}
 
 
+
+
+
+
+            <div id='privacy' className='bg-pattern mt-12 pb-12 px-8 flex flex-col pt-10 items-center justify-center md:flex-row md:items-center md:justify-between text-white'>
+                <h2 className='text-center text-6xl py-6 mt-5'>Privacy Policy</h2>
+                <div className='px-16 py-8 text-white text-xs text-center bg-gray-900 rounded-md border-4 border-lime'>
+                    <ul>
+
+                        <li className="py-2">Your privacy is important to us. This notice explains our online information practices and the choices you can make about the way your information is used at our Website <span className='px-18 md:px-16 text-xs'>(https://www.thelostbulls.io/).</span></li>
+                        <li className="py-4">Collection of Personal Information</li>
+                        <li className="py-2">The Lost Bulls may collect certain personally identifiable information (“Personal Information”) about you when you visit our Website. Examples of personal information we may collect include your name, address, telephone number, fax number, e-mail address. We also automatically collect certain non-personally identifiable information when you visit our Website, including, but not limited to, the type of browser you are using, the type of operating system you are using, and the domain name of your Internet service provider.</li>
+                        <li className="py-4">Use of Personal Information</li>
+                        <li className="py-2">The Lost Bulls will only use your personal information where we have a lawful basis to do so. We will process your data for the following lawful purposes: with your consent; where it is necessary for us to perform a contract we have with you, such as sending out purchased items / merchandise, or because you have asked us to take specific steps before entering into a contract (for example, responding to your inquiry ); because the processing is necessary for us to comply with the law; or where the processing is necessary for our legitimate interests or the legitimate interests of a third party.</li>
+                        <li className="py-2">We typically will not contact you about other matters, unless you specifically request it, nor will we share, rent, or sell your personal information outside The Lost Bulls, except where we are required to share your information with any third parties who provide services on our behalf.</li>
+                        <li className="py-2">It is possible, though unlikely, that we might be forced to disclose personal information in response to a legal demand or when we believe in good faith that the law requires it, for example, in response to a law enforcement agency's request.</li>
+                        <li className="py-2">We use non-personally identifiable information to analyze site usage (such as aggregated information on the pages visited by our users), which allows us to improve the design and content of our site.</li>
+                        <li className="py-2">We cannot guarantee the privacy of personal information you transmit over the web or that may be collectible in transit by others, including contractors who provide services to The Lost Bulls.
+                        </li>
+                        <li className="py-2">We are committed to complying with all applicable privacy laws and regulations. To the extent we receive personal information from a resident of the European Union, we will comply with the requirements of the General Data Protection Regulation (GDPR). To the extent we receive personal information from a resident of California, we will comply with the requirements of the California Consumer Privacy Act (CCPA) (California Civil Code Section 1798.100 et seq).</li>
+                        <li className="py-4">Third Party Sites</li>
+                        <li className="py-2">Our Website may contain links to other websites such as a minting page. The data privacy practices of those third-party websites might differ from The Lost Bulls’. You should consult the other websites' privacy notices for information on their privacy practices as The Lost Bulls has no control over information that is submitted to, or collected by, these third parties.</li>
+                        <li className="py-2">The Lost Bulls may post information on our Website about programs and events that are sponsored by or co-sponsored by other organizations. The Lost Bulls will have no control over the third-party sponsors' use of this information.</li>
+                        <li className="py-4">Cookies</li>
+                        <li className="py-2">When you visit our Website, we and third parties with whom we have contracted to provide services to The Lost Bulls may collect "Site Usage Data," which is non-personally identifiable information relating to your use of our Website such as what Website pages you visit. The Website Usage Data could include your MAC address, operating system version, type of computer and browser type. This data could also include demographic data, such as a Website visitor's geographic location. To enhance your experience on our Website, we and our service providers may use "cookies" on our Website.</li>
+                        <li className="py-2">A "cookie" is a piece of information that a web server may place on your computer when you visit a website. Cookies are commonly used by websites to improve the user experience and have not been known to transmit computer viruses or otherwise harm your computer. Many cookies last only through a single website session or visit. Others may have an expiration date or may remain on your computer until you delete them.</li>
+                        <li className="py-2">We may use cookies for a number of purposes - for example, to maintain continuity during a user session, to gather Website Usage Data for research and other purposes, to store your preferences for certain kinds of information and marketing offers, or to store certain information so that you do not have to provide this information every time you return to one of our Website. Our cookies will track only your activity relating to your online activity on our Website, and will not track your other Internet activity. Our cookies do not gather personal information.</li>
+                        <li className="py-2">You can decide if and how your computer will accept a cookie by configuring your preferences or options in your browser. However, if you choose to reject cookies, you may not be able to use certain online products and services offered on the Website or certain features of our Website.</li>
+                        <li className="py-2">The Lost Bulls may occasionally use other companies to set cookies on our Website and gather Website Usage Data for The Lost Bulls. In some cases, The Lost Bulls may also use another company to operate web servers for our Website. The Lost Bulls uses the cookie information gathered by these companies in the same manner as stated in this Privacy Policy.</li>
+                        <li className="py-4">IP Addresses</li>
+                        <li className="py-2">When you visit and interact with our Website, The Lost Bulls and third parties with whom we have contracted to provide services for us may collect Internet Protocol (IP) addresses (each an "IP Address"). An IP Address is a number that is automatically assigned to the computer that you are using by your Internet Service Provider (ISP). Your IP Address is identified and logged automatically whenever you visit the Website, along with the time(s) of your visit(s), your geographic location and the page(s) that you visited. The Lost Bulls uses this information to determine the locations of our Website visitors to better understand where our visitors reside. The Lost Bulls also may use this information to enhance our Website or for other lawful purposes.</li>
+                        <li className="py-2">Certain pages on our Website contain "web beacons" (also known as Internet tags, pixel tags and clear GIFs). These web beacons allow third parties to obtain information such as the IP Address of the computer that downloaded the page on which the beacon appears, the URL of the page on which the beacon appears, the time the page containing the beacon was viewed, the type of browser used to view the page, and the information in cookies set by the third party.
+                        </li>
+                        <li className="py-4">Legal Rights of European Residents</li>
+                        <li className="py-2">Some data protection laws, including GDPR, provide you with certain rights in connection with personal information you have shared with us. If you are resident in the European Economic Area, you may have the following rights:</li>
+                        <li className="py-2">The right to be informed: You are entitled to be informed of the use of your personal information. This Privacy Policy provides such information to you.
+                        </li>
+                        <li className="py-2">The right of access: You have the right to request a copy of your personal information which we hold about you.</li>
+                        <li className="py-2">The right of correction: You have the right to request correction or changes of your personal information if it is found to be inaccurate or out of date.</li>
+                        <li className="py-2">The right to be forgotten: You have the right to request us, at any time, to delete your personal information from our servers and to erase your personal information when it is no longer necessary for us to retain such data. Note, however, that deletion of your personal information will likely impact your ability to use our services.</li>
+                        <li className="py-2">The right to object (opt-out): You have the right to opt-out of certain uses of your personal information, such as direct marketing, at any time.</li>
+                        <li className="py-2">The right to data portability: You have the right to a “portable” copy of your personal information that you have submitted to us. Generally, this means your right to request that we move, copy or transmit your personal information stored on our servers / IT environment to another service provider’s servers / IT environment.
+                        </li>
+                        <li className="py-2">The right to refuse to be subjected to automated decision making, including profiling: You have the right not to be subject to a decision and insist on human intervention if the decision is based on automated processing and produces a legal effect or a similarly significant effect on you.</li>
+                        <li className="py-4">Contacting Us</li>
+                        <li className="py-2">If you have any questions or concerns about our privacy policy, please open a ticket in the TLB Discord at https://discord.gg/HkpkR7U4
+                        </li>
+
+                    </ul>
                 </div>
+
+
             </div>
+
 
             <Footer />
         </>
