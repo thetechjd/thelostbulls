@@ -373,33 +373,34 @@ export default function Home() {
                 Join Pre-Sale Whitelist
               </button>
             </div>
-          </div>
-
-
-          <About />
 
 
 
-
-          <div className="relative rounded-md pb-2 mt-12 p-2 items-center">
-            <img src='/images/lostbulls_new.gif' alt='pass image' className='w-max-[400px] rounded-lg mb-5 flex' />
-          </div>
-
-
-          {/* Total supply - Price info */}
-          <div className='flex flex-col bg-aqua items-center justify-center justify-between text-black rounded-md w-1/2 mx-auto p-2 border-2 border-gray-100'>
-
-            <p className='text-gray-100 p-2'>{totalMinted}/5000 Minted</p>
+            <About />
 
 
 
 
-
-            <div className='mb-4 w-full md:w-3/4 flex flex-row items-center justify-between'>
-              <p className='font-bold text-xs md:text-sm text-gray-100'>Price Per Mint:</p>
-              <p className='font-bold text-xs md: text-sm text-gray-100'>{price} ETH</p>
+            <div className="relative rounded-md pb-2 mt-12 p-2 items-center">
+              <img src='/images/lostbulls_new.gif' alt='pass image' className='w-max-[400px] rounded-lg mb-5 flex' />
             </div>
 
+
+            {/* Total supply - Price info */}
+            <div className='flex flex-col bg-aqua items-center justify-center justify-between text-black rounded-md w-1/2 mx-auto p-2 border-2 border-gray-100'>
+
+              <p className='text-gray-100 p-2'>{totalMinted}/5000 Minted</p>
+
+
+
+
+
+              <div className='mb-4 w-full md:w-3/4 flex flex-row items-center justify-between'>
+                <p className='font-bold text-xs md:text-sm text-gray-100'>Price Per Mint:</p>
+                <p className='font-bold text-xs md: text-sm text-gray-100'>{price} ETH</p>
+              </div>
+
+            </div>
           </div>
 
         </div>
