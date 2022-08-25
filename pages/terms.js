@@ -186,7 +186,7 @@ export default function Terms() {
             <section className="flex items-center justify-center bg-pattern py-12 overflow-hidden relative z-10" id="">
                 <div id='terms' className='bg-pattern w-full mt-12 pb-12 md:px-8 flex flex-col pt-10 items-center justify-center md:flex-row md:items-center md:justify-between text-white'>
                     <h2 className='text-center text-6xl py-6 mt-5'>Terms & Conditions</h2>
-                    <div className='w-3/4 px-2 md:px-16 py-8 text-white text-sm bg-gray-900 rounded-md border-4 border-lime'>
+                    <div className='w-4/5 px-2 md:px-16 py-8 text-white text-sm bg-gray-900 rounded-md border-4 border-lime'>
                         <ul>
                             <li className="py-4">1.General Disclaimer</li>
                             <li>By using our Site <span className='text-xs px-18 md:px-0'>(https://www.thelostbulls.io/)</span> you are agreeing to be bound by following terms and conditions (Terms). The Lost Bulls and other affiliated websites provide (the "Sites") as a service to the public. The Lost Bulls and its affiliated sites are not responsible for, and expressly disclaims all liability for, damages of any kind arising out of use, reference to, or reliance on any information contained within this website. While the information contained within this website is periodically updated, no guarantee is given that the information provided in this website is correct, complete, and up-to-date.</li>
