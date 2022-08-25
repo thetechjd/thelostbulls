@@ -361,17 +361,18 @@ export default function Home() {
 
 
             </div>
-            <div className="w-full px-4 flex flex-col justify-center"></div>
+            <div className="w-full px-4 flex flex-col items-center">
 
-            <h3 className='text-center text-brightyellow font-semibold'>For every NFT minted, TLB creators will automatically burn 1,000,000 Shiba Inu tokens</h3>
+              <h3 className='text-center text-brightyellow font-semibold'>For every NFT minted, TLB creators will automatically burn 1,000,000 Shiba Inu tokens</h3>
 
-            <button
-              className='connect titanium text-xs md:text-md mt-5 font-semibold uppercase font-base text-white px-1 md:px-3 py-2 border-2 border-teal rounded-md tracking-wide w-1/2 md:w-1/3 lg:w-1/4 hover:shadow-green-500/20'
-            // onClick={mintPass}
+              <button
+                className='connect titanium text-xs md:text-md mt-5 font-semibold uppercase font-base text-white px-1 md:px-3 py-2 border-2 border-teal rounded-md tracking-wide w-1/2 md:w-1/3 lg:w-1/4 hover:shadow-green-500/20'
+              // onClick={mintPass}
 
-            >
-              Join Pre-Sale Whitelist
-            </button>
+              >
+                Join Pre-Sale Whitelist
+              </button>
+            </div>
           </div>
         </div>
       </section>
