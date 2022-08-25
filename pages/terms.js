@@ -184,7 +184,7 @@ export default function Terms() {
 
 
 
-            <div id='terms' className='bg-pattern mt-12 -mr-18 md:mr-0 pt-5 pb-12 px-8 flex flex-col justify-between'>
+            <div id='terms' className='bg-pattern mt-12 pt-5 pb-12 px-8 flex flex-col justify-between'>
                 <h2 className='text-center text-6xl py-6 mt-5'>Terms & Conditions</h2>
                 <div className='px-16 py-8 text-white text-sm bg-gray-900 rounded-md border-4 border-lime'>
                     <ul>
