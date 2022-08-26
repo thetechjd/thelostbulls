@@ -344,9 +344,9 @@ export default function Home() {
 
         <div className="flex flex-col items-center justify-center md:items-center md:justify-between text-slate-900">
 
-          <div className="w-full mt-12 px-0 md:px-4">
+          <div className="w-full mt-12 py-6 px-0 md:px-4">
 
-            <img src='/images/newbanner.png' className='w-full' />
+            <img src='/images/newbanner.png' className='h-[250px] md:h-max-[500px] w-full' />
 
           </div>
 
