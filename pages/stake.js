@@ -514,6 +514,7 @@ export default function Home() {
                 <div className='justify-center items-center mt-5 text-white text-sm bg-gray-900 rounded-md border-4 border-lime'>
 
                   <ul className=''>
+                    <li className='px-8 text-xs'>*Press 'Refresh' if fields do not update.*</li>
                     <li className='px-8 text-xs'>Please verify you have the correct tokenId before staking or transaction will revert.</li>
                     <li className='mx-12 p-2 list-disc'>1 month: 20% the staked NFT’s portion</li>
                     <li className='mx-12 p-2 list-disc'>2 months: 33% the staked NFT’s portion</li>
