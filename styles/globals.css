@@ -94,6 +94,7 @@ html {
   background-attachment: fixed;
   background-size: cover;
   background-position: left 50% top 50%;
+  -webkit-transform: translateZ(0); 
 }
 
 .bg-header {
