@@ -342,11 +342,12 @@ export default function Home() {
 
 
 
-        <div className="flex flex-col items-center justify-center md:items-center md:justify-between text-slate-900">
+        <div className="flex flex-col items-center justify-center md:flex-row md:items-center md:justify-between text-slate-900">
 
-          <div className="w-full mt-12 py-6 px-0 md:px-4">
+          <div className="w-full h-[200px] md:max-h-[500px] mt-12 px-0 md:px-4">
 
-            <img src='/images/newbanner.png' className='h-[250px] md:h-max-[500px] w-full' />
+            <img src='/images/shortbanner.png' className='md:hidden w-full' />
+            <img src='/images/newbanner.png' className='hidden md:flex md:max-h-[500px] md:w-full' />{/*h-[200px] w-[800px] overflow:hidden*/}
 
           </div>
 
@@ -449,7 +450,8 @@ export default function Home() {
           </div>
         </div>
 
-
+        <img className="fixed bottom-0 left-0 w-1/5 z-20" src="/images/mainbull.png" />
+        <img className="fixed top-5 right-5 w-1/8 z-20" src="/images/spaceship.png" />
 
       </section>
 
@@ -477,8 +479,7 @@ export default function Home() {
       <Footer />
 
 
-      <img className="fixed bottom-0 left-0 w-1/5 z-20" src="/images/mainbull.png" />
-      <img className="fixed top-5 right-5 w-1/8 z-20" src="/images/spaceship.png" />
+
 
 
 
