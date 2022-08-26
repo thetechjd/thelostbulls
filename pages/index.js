@@ -389,7 +389,7 @@ export default function Home() {
             {/* Total supply - Price info */}
             <div className='flex flex-col bg-aqua items-center justify-center justify-between text-black rounded-md w-3/4 md:w-1/2 mx-auto p-2 border-2 border-gray-100'>
 
-              <p className='text-xs text-gray-100 p-2'>{totalMinted}/5000 Minted</p>
+              <p className='text-xs items-center text-gray-100 p-2'>{totalMinted}/5000 Minted</p>
 
 
 
