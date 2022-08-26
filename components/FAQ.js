@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function FAQ() {
     return (
-        <div id='faq' className='bg-pattern pb-3 pt-12 px-4 flex flex-col justify-between'>
+        <div id='faq' className='small-bg md:bg-pattern pb-3 pt-12 px-4 flex flex-col justify-between'>
 
             <h2 className='text-center text-6xl py-6'>FAQ's</h2>
             <div className='px-4 py-8 text-white text-sm bg-gray-900 rounded-md border-4 border-lime'>
