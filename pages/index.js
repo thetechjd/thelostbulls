@@ -354,7 +354,7 @@ export default function Home() {
 
               <div className="w-full h-[300px] md:max-h-[500px] mt-12 px-0 md:px-4">
 
-                <img src='/images/newbanner.png' className='h-[300px] w-[600px] overflow-hidden md:max-h-[500px] md:w-full' />
+                <img src='/images/newbanner.png' className='h-[300px] w-[600px] overflow:hidden md:max-h-[500px] md:w-full' />
 
               </div>
 
