@@ -166,7 +166,7 @@ export default function Home() {
     let stakedToken = document.getElementById('rewardId').value;
     let earned;
     const contractBalance = await web3.eth.getBalance(stakeAddress);
-    const payout = (((contractBalance) / 10 ** 18) / 3 / totalStaked).toFixed(3);
+    const payout = (((contractBalance) / 10 ** 18) / 4 / totalStaked).toFixed(3);
     const timeElapsed = await stakeContract.methods.calculateTokens(stakedToken).call();
     if (timeElapsed < 30) {
       earned = 0;
@@ -174,9 +174,12 @@ export default function Home() {
       earned = payout / 5;
     } else if (timeElapsed >= 60 && timeElapsed < 90) {
       earned = payout / 3;
-    } else {
+    } else if (timeElapsed <= 90) {
       earned = payout;
 
+    }
+    else {
+      earned = 0;
     }
     setReward(earned);
 
