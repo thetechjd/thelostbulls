@@ -344,12 +344,7 @@ export default function Home() {
 
         <div className="flex flex-col items-center justify-center md:flex-row md:items-center md:justify-between text-slate-900">
 
-          <div className="w-full h-[200px] md:max-h-[500px] mt-12 px-0 md:px-4">
 
-            <img src='/images/shortbanner.png' className='md:hidden w-full z-40' />
-            <img src='/images/newbanner.png' className='hidden md:flex md:max-h-[500px] md:w-full z-50' />{/*h-[200px] w-[800px] overflow:hidden*/}
-
-          </div>
 
           {/* Left Hero Section - Mint Info */}
           <div className="w-full px-4 flex flex-col justify-center items-center ">
@@ -357,8 +352,12 @@ export default function Home() {
 
             <div className="w-full mb-12 mt-8 md:mb-0">
 
+              <div className="w-full h-[200px] md:max-h-[500px] mt-12 px-0 md:px-4">
 
+                <img src='/images/shortbanner.png' className='md:hidden w-full z-40' />
+                <img src='/images/newbanner.png' className='hidden md:flex md:max-h-[500px] md:w-full z-50' />{/*h-[200px] w-[800px] overflow:hidden*/}
 
+              </div>
 
 
             </div>
