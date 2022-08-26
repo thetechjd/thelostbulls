@@ -174,7 +174,7 @@ export default function Home() {
       earned = payout / 5;
     } else if (timeElapsed >= 60 && timeElapsed < 90) {
       earned = payout / 3;
-    } else if (timeElapsed <= 90) {
+    } else if (timeElapsed >= 90) {
       earned = payout;
 
     }
