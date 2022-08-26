@@ -346,8 +346,8 @@ export default function Home() {
 
           <div className="w-full h-[200px] md:max-h-[500px] mt-12 px-0 md:px-4">
 
-            <img src='/images/shortbanner.png' className='lg:hidden w-full z-40' />
-            <img src='/images/newbanner.png' className='hidden lg:flex md:max-h-[500px] md:w-full z-50' />{/*h-[200px] w-[800px] overflow:hidden*/}
+            <img src='/images/shortbanner.png' className='md:hidden w-full z-40' />
+            <img src='/images/newbanner.png' className='hidden md:flex md:max-h-[500px] md:w-full z-50' />{/*h-[200px] w-[800px] overflow:hidden*/}
 
           </div>
 
