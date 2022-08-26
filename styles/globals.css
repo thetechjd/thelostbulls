@@ -92,7 +92,7 @@ html {
   background-color: #0B082C;
   background-image: url('/images/1876.jpg'); 
   background-size: cover;
-  background-position: left 50% top 50%;
+  background-position: left 50% top 0%;
   -webkit-transform: translateZ(0); 
 }
 
