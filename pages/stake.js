@@ -114,6 +114,7 @@ export default function Home() {
   const updateBalance = async () => {
     getBalance();
     getNumberStaked();
+    setReward(0);
 
   }
   const getBalance = async () => {
