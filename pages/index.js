@@ -342,9 +342,13 @@ export default function Home() {
 
 
 
-        <div className="flex flex-col items-center justify-center md:flex-row md:items-center md:justify-between text-slate-900">
+        <div className="flex flex-col items-center justify-center md:items-center md:justify-between text-slate-900">
 
+          <div className="w-full mt-12 px-0 md:px-4">
 
+            <img src='/images/newbanner.png' className='w-full' />
+
+          </div>
 
           {/* Left Hero Section - Mint Info */}
           <div className="w-full px-4 flex flex-col justify-center items-center ">
@@ -352,11 +356,7 @@ export default function Home() {
 
             <div className="w-full mb-12 mt-8 md:mb-0">
 
-              <div className="w-full h-[200px] md:max-h-[500px] mt-12 px-0 md:px-4">
 
-                <img src='/images/newbanner.png' className='h-[200px] w-[800px] overflow:hidden md:max-h-[500px] md:w-full' />
-
-              </div>
 
 
 
@@ -449,8 +449,7 @@ export default function Home() {
           </div>
         </div>
 
-        <img className="fixed bottom-0 left-0 w-1/5 z-20" src="/images/mainbull.png" />
-        <img className="fixed top-5 right-5 w-1/8 z-20" src="/images/spaceship.png" />
+
 
       </section>
 
@@ -478,7 +477,8 @@ export default function Home() {
       <Footer />
 
 
-
+      <img className="fixed bottom-0 left-0 w-1/5 z-20" src="/images/mainbull.png" />
+      <img className="fixed top-5 right-5 w-1/8 z-20" src="/images/spaceship.png" />
 
 
 
