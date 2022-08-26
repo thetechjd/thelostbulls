@@ -428,7 +428,7 @@ export default function Home() {
 
             <div className="w-full mt-12 px-4 items-center justify-center">
 
-              <div className="max-w-[600px] px-6 py-2 rounded-lg bg-gray-900 items-center justify-center">
+              <div className="max-w-[600px] px-6 mt-5 py-2 rounded-lg bg-gray-900 items-center justify-center">
                 {walletAddress.length > 0 ? (
 
 
