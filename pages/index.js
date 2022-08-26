@@ -342,7 +342,7 @@ export default function Home() {
 
 
 
-        <div className="flex flex-col items-center justify-center md:flex-row md:items-center md:justify-between text-slate-900">
+        <div className="flex flex-col items-center justify-center md:items-center md:justify-between text-slate-900">
 
 
 
