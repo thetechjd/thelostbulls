@@ -27,6 +27,10 @@
  
 }
 
+.container::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
 :root{
   --font-family: 'PressStart';
   --clr-light: #f7ede2;
