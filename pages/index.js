@@ -352,7 +352,7 @@ export default function Home() {
 
             <div className="w-full mb-12 mt-8 md:mb-0">
 
-              <div className="w-full mt-12 px-0 md:px-4">
+              <div className="w-full max-h-3/4 mt-12 px-0 md:px-4">
 
                 <img src='/images/newbanner.png' className='max-h-3/4 md:w-full' />
 
