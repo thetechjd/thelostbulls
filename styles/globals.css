@@ -27,9 +27,7 @@
  
 }
 
-.container::-webkit-scrollbar { 
-  display: none;  /* Safari and Chrome */
-}
+
 
 :root{
   --font-family: 'PressStart';
@@ -53,6 +51,10 @@ html, body {
   font-size: 20px;
   /* background: var(--clr-background); */
   color: var(--clr-selection-text);
+}
+
+html::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
 }
 
 a {
