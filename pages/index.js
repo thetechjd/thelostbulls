@@ -338,7 +338,7 @@ export default function Home() {
       <section className="flex items-center w-full justify-center small-bg md:bg-pattern py-12 px-5 overflow-hidden relative z-10" id="">
 
         {/* margin between header and hero section */}
-        <div className="mb-10 flex items-center max-w-md mt-4"></div>
+        <div className="mb-10 flex items-center max-w-md mt-8"></div>
 
 
 
