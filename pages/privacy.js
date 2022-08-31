@@ -226,7 +226,7 @@ export default function Privacy() {
                             </li>
                             <li className="py-2">The right to refuse to be subjected to automated decision making, including profiling: You have the right not to be subject to a decision and insist on human intervention if the decision is based on automated processing and produces a legal effect or a similarly significant effect on you.</li>
                             <li className="py-4">Contacting Us</li>
-                            <li className="py-2">If you have any questions or concerns about our privacy policy, please open a ticket in the <a href='https://discord.gg/HkpkR7U4' className='text-brightyellow'>TLB Discord.</a>
+                            <li className="py-2">If you have any questions or concerns about our privacy policy, please open a ticket in the <a href='https://discord.gg/G6fkRc2yVr' className='text-brightyellow'>TLB Discord.</a>
                             </li>
 
                         </ul>
