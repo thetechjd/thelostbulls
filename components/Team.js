@@ -19,7 +19,7 @@ export default function Team() {
                     </div>
                     <div className='flex flex-row justify-center py-6'>
                         <img src='./images/marla.webp' className='w-1/2 mx-6' />
-                        <img src='./images/west.png' className='w-1/2 mx-6' />
+                        <img src='./images/west.webp' className='w-1/2 mx-6' />
                     </div>
 
                 </div>
