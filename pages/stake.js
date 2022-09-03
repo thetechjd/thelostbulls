@@ -9,8 +9,8 @@ import { connectWallet, getCurrentWalletConnected, getNFTPrice, getTotalMinted, 
 
 const contractABI = require("./contract-abi.json");
 const stakeABI = require("./stake-abi.json");
-const contractAddress = "0xCB20c7BC687549489cF638Eb2890F49a4712ca7c";
-const stakeAddress = "0xCa7D2C7742d7F5Fe635bd3B167A59e88aE93B20C"
+const contractAddress = "0x5338d872804B2a0dDEfBC56f8030EDD6Ae3d1a7c";
+const stakeAddress = "0xc1424700Eb622Dc63D352C1Ce93262A400fE01Fd"
 
 const web3 = createAlchemyWeb3(process.env.NEXT_PUBLIC_ALCHEMY_KEY);
 

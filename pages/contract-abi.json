@@ -10,6 +10,11 @@
                 "internalType": "address",
                 "name": "_shibaWallet",
                 "type": "address"
+            },
+            {
+                "internalType": "uint96",
+                "name": "_royaltyFeesInBips",
+                "type": "uint96"
             }
         ],
         "stateMutability": "nonpayable",
@@ -521,6 +526,32 @@
         "name": "reserveNFT",
         "outputs": [],
         "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "royaltyAddress",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "royaltyFeesInBips",
+        "outputs": [
+            {
+                "internalType": "uint96",
+                "name": "",
+                "type": "uint96"
+            }
+        ],
+        "stateMutability": "view",
         "type": "function"
     },
     {

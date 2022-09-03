@@ -14,7 +14,7 @@ import { useStatus } from "../context/statusContext";
 import { connectWallet, getCurrentWalletConnected, getNFTPrice, getTotalMinted } from "../utils/interact.js";
 
 const contractABI = require("../pages/contract-abi.json");
-const contractAddress = "0xCB20c7BC687549489cF638Eb2890F49a4712ca7c";
+const contractAddress = "0x5338d872804B2a0dDEfBC56f8030EDD6Ae3d1a7c";
 const web3 = createAlchemyWeb3(process.env.NEXT_PUBLIC_ALCHEMY_KEY);
 
 
