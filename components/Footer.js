@@ -3,7 +3,7 @@ import React from 'react'
 export default function Footer() {
   return (
     <footer className='bg-footer w-full h-48 pt-4 flex flex-col items-center'>
-      <p><a href="/whitepaper.pdf">Whitepaper</a></p>
+      <p><a href="/whitepaper_new.pdf">Whitepaper</a></p>
       <ul className='flex space-x-2'>
         <li className='flex'>
           <a className='bg-opacity-0 text-gray-100 opacity-80 items-center relative h-7 tracking-wider pt-0.5 first::pt-0 uppercase text-2xs font-500 padding-huge bg-blue-300 duration-200 px-4 hover:bg-opacity-90 rounded flex justify-center flex-row transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110' href='https://twitter.com/thelostbullsnft' target='_blank' rel='noreferrer'>
