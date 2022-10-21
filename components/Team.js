@@ -17,10 +17,7 @@ export default function Team() {
                         <img src='./images/raven.webp' className='w-1/2 mx-6' />
                         <img src='./images/kevanj.webp' className='w-1/2 mx-6' />
                     </div>
-                    <div className='flex flex-row justify-center py-6'>
-                        <img src='./images/marla.webp' className='w-1/2 mx-6 md:px-6 lg:mx-0' />
-                        <img src='./images/west.webp' className='w-1/2 mx-6 md:px-6 lg:mx-0 ' />
-                    </div>
+
 
                 </div>
             </div>
